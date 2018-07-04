@@ -1,0 +1,750 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript">
+        window.SagetCookie = function(name){
+            var reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)"),
+                arr=document.cookie.match(reg);
+            return arr ? unescape(arr[2]) : null;
+        }
+
+        window.PUBLIC_ATTRIBUTES = {};
+
+        PUBLIC_ATTRIBUTES.platformId = (function(){var isPc = (function() {var userAgentInfo = navigator.userAgent; Agents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"], flag = true; for(var v = 0; v < Agents.length; v++) {if(userAgentInfo.indexOf(Agents[v]) > 0) {flag = false; break; } } return flag; })(); var isWx = (function() {var ua = window.navigator.userAgent.toLowerCase(); return ua.match(/MicroMessenger/i) == 'micromessenger'})(); return isPc ? 1 : isWx ? 5 :2; })();
+
+        PUBLIC_ATTRIBUTES.getReferrerHost=(function(){function _t(){return new RegExp(/(.*?)\.?([^\.]*?)\.?(com|net|org|biz|ws|in|me|co\.uk|co|org\.uk|ltd\.uk|plc\.uk|me\.uk|edu|mil|br\.com|cn\.com|eu\.com|hu\.com|no\.com|qc\.com|sa\.com|se\.com|se\.net|us\.com|uy\.com|ac|co\.ac|gv\.ac|or\.ac|ac\.ac|af|am|as|at|ac\.at|co\.at|gv\.at|or\.at|asn\.au|com\.au|edu\.au|org\.au|net\.au|id\.au|be|ac\.be|adm\.br|adv\.br|am\.br|arq\.br|art\.br|bio\.br|cng\.br|cnt\.br|com\.br|ecn\.br|eng\.br|esp\.br|etc\.br|eti\.br|fm\.br|fot\.br|fst\.br|g12\.br|gov\.br|ind\.br|inf\.br|jor\.br|lel\.br|med\.br|mil\.br|net\.br|nom\.br|ntr\.br|odo\.br|org\.br|ppg\.br|pro\.br|psc\.br|psi\.br|rec\.br|slg\.br|tmp\.br|tur\.br|tv\.br|vet\.br|zlg\.br|br|ab\.ca|bc\.ca|mb\.ca|nb\.ca|nf\.ca|ns\.ca|nt\.ca|on\.ca|pe\.ca|qc\.ca|sk\.ca|yk\.ca|ca|cc|ac\.cn|com\.cn|edu\.cn|gov\.cn|org\.cn|bj\.cn|sh\.cn|tj\.cn|cq\.cn|he\.cn|nm\.cn|ln\.cn|jl\.cn|hl\.cn|js\.cn|zj\.cn|ah\.cn|gd\.cn|gx\.cn|hi\.cn|sc\.cn|gz\.cn|yn\.cn|xz\.cn|sn\.cn|gs\.cn|qh\.cn|nx\.cn|xj\.cn|tw\.cn|hk\.cn|mo\.cn|cn|cx|cz|de|dk|fo|com\.ec|tm\.fr|com\.fr|asso\.fr|presse\.fr|fr|gf|gs|co\.il|net\.il|ac\.il|k12\.il|gov\.il|muni\.il|ac\.in|co\.in|org\.in|ernet\.in|gov\.in|net\.in|res\.in|is|it|ac\.jp|co\.jp|go\.jp|or\.jp|ne\.jp|ac\.kr|co\.kr|go\.kr|ne\.kr|nm\.kr|or\.kr|li|lt|lu|asso\.mc|tm\.mc|com\.mm|org\.mm|net\.mm|edu\.mm|gov\.mm|ms|nl|no|nu|pl|ro|org\.ro|store\.ro|tm\.ro|firm\.ro|www\.ro|arts\.ro|rec\.ro|info\.ro|nom\.ro|nt\.ro|se|si|com\.sg|org\.sg|net\.sg|gov\.sg|sk|st|tf|ac\.th|co\.th|go\.th|mi\.th|net\.th|or\.th|tm|to|com\.tr|edu\.tr|gov\.tr|k12\.tr|net\.tr|org\.tr|com\.tw|org\.tw|net\.tw|ac\.uk|uk\.com|uk\.net|gb\.com|gb\.net|vg|sh|kz|ch|info|ua|gov|name|pro|ie|hk|com\.hk|org\.hk|net\.hk|edu\.hk|us|tk|cd|by|ad|lv|eu\.lv|bz|es|jp|cl|ag|mobi|eu|co\.nz|org\.nz|net\.nz|maori\.nz|iwi\.nz|io|la|md|sc|sg|vc|tw|travel|my|se|tv|pt|com\.pt|edu\.pt|asia|fi|com\.ve|net\.ve|fi|org\.ve|web\.ve|info\.ve|co\.ve|tel|im|gr|ru|net\.ru|org\.ru|hr|com\.hr|ly|xyz)$/)}function _d(s){var result='';try{result=decodeURIComponent(s.replace(/\+/g,' '))}catch(e){result=s.replace(/\+/g,' ')};return result}function _i(arg,str){var sptr=arg.charAt(0),split=str.split(sptr);if(sptr===arg){return split}arg=parseInt(arg.substring(1),10);return split[arg<0?split.length+arg:arg-1]}function _f(arg,str){var sptr=arg.charAt(0),split=str.split('&'),field=[],params={},tmp=[],arg2=arg.substring(1);for(var i=0,ii=split.length;i<ii;i++){field=split[i].match(/(.*?)=(.*)/);if(!field){field=[split[i],split[i],'']}if(field[1].replace(/\s/g,'')!==''){field[2]=_d(field[2]||'');if(arg2===field[1]){return field[2]}tmp=field[1].match(/(.*)\[([0-9]+)\]/);if(tmp){params[tmp[1]]=params[tmp[1]]||[];params[tmp[1]][tmp[2]]=field[2]}else{params[field[1]]=field[2]}}}if(sptr===arg){return params}return params[arg2]}return function(arg,url){var _l={},tmp,tmp2;if(arg==='tld?'){return _t()}url=url||window.location.toString();if(!arg){return url}arg=arg.toString();if(tmp=url.match(/^mailto:([^\/].+)/)){_l.protocol='mailto';_l.email=tmp[1]}else{if(tmp=url.match(/(.*?)\/#\!(.*)/)){url=tmp[1]+tmp[2]}if(tmp=url.match(/(.*?)#(.*)/)){_l.hash=tmp[2];url=tmp[1]}if(_l.hash&&arg.match(/^#/)){return _f(arg,_l.hash)}if(tmp=url.match(/(.*?)\?(.*)/)){_l.query=tmp[2];url=tmp[1]}if(_l.query&&arg.match(/^\?/)){return _f(arg,_l.query)}if(tmp=url.match(/(.*?)\:?\/\/(.*)/)){_l.protocol=tmp[1].toLowerCase();url=tmp[2]}if(tmp=url.match(/(.*?)(\/.*)/)){_l.path=tmp[2];url=tmp[1]}_l.path=(_l.path||'').replace(/^([^\/])/,'/$1').replace(/\/$/,'');if(arg.match(/^[\-0-9]+$/)){arg=arg.replace(/^([^\/])/,'/$1')}if(arg.match(/^\//)){return _i(arg,_l.path.substring(1))}tmp=_i('/-1',_l.path.substring(1));if(tmp&&(tmp=tmp.match(/(.*?)\.(.*)/))){_l.file=tmp[0];_l.filename=tmp[1];_l.fileext=tmp[2]}if(tmp=url.match(/(.*)\:([0-9]+)$/)){_l.port=tmp[2];url=tmp[1]}if(tmp=url.match(/(.*?)@(.*)/)){_l.auth=tmp[1];url=tmp[2]}if(_l.auth){tmp=_l.auth.match(/(.*)\:(.*)/);_l.user=tmp?tmp[1]:_l.auth;_l.pass=tmp?tmp[2]:undefined}_l.hostname=url.toLowerCase();if(arg.charAt(0)==='.'){return _i(arg,_l.hostname)}if(_t()){tmp=_l.hostname.match(_t());if(tmp){_l.tld=tmp[3];_l.domain=tmp[2]?tmp[2]+'.'+tmp[3]:undefined;_l.sub=tmp[1]||undefined}}_l.port=_l.port||(_l.protocol==='https'?'443':'80');_l.protocol=_l.protocol||(_l.port==='443'?'https':'http')}if(arg in _l){return _l[arg]}if(arg==='{}'){return _l}return undefined}})();
+
+        PUBLIC_ATTRIBUTES.$referrer=(function(){
+            var referrer = document.referrer;
+            if(referrer.indexOf("https://www.baidu.com/") === 0){
+                referrer =  referrer.split('?')[0];
+            }
+            return (typeof referrer === 'string' ? referrer : '' );
+        }())
+
+        PUBLIC_ATTRIBUTES.$referrer_host=(function(){
+            var p=PUBLIC_ATTRIBUTES;
+            return p.$referrer ? p.getReferrerHost('hostname',p.$referrer) : p.$referrer;
+        }())
+
+    </script>
+    <script type="text/javascript">
+        var sa_enabled = true;
+        /*Sensors Analytics JS SDK*/
+        (function(para) {
+            var p = para.sdk_url, n = para.name, w = window, d = document, s = 'script',x = null,y = null;
+            w['sensorsDataAnalytic201505'] = n;
+            w[n] = w[n] || function(a) {return function() {(w[n]._q = w[n]._q || []).push([a, arguments]);}};
+            var ifs = ['track','quick','register','registerPage','registerOnce','registerSession','registerSessionOnce','trackSignup', 'trackAbtest', 'setProfile','setOnceProfile','appendProfile', 'incrementProfile', 'deleteProfile', 'unsetProfile', 'identify','login'];
+            for (var i = 0; i < ifs.length; i++) {
+                w[n][ifs[i]] = w[n].call(null, ifs[i]);
+            }
+            if (!w[n]._t) {
+                x = d.createElement(s), y = d.getElementsByTagName(s)[0];
+                x.async = 1;
+                x.src = p;
+                y.parentNode.insertBefore(x, y);
+                w[n]._t = 1 * new Date();
+                w[n].para = para;
+            }
+        })({
+            sdk_url: 'https://source-ba.azoyacdn.com/js/sensorsanalytics/sensorsdata.full.js',
+            name: 'da_sensorsdata',
+            server_url:'https://report.azoyagroup.com/?app_id=bmODQ1OTU1&sign=7cdcc0ea3e3597fe4009b724d73aa5aa'
+        });
+    </script>
+    <script type="text/javascript">
+        da_sensorsdata.quick('allTrack');
+
+        ~(function(){
+
+            function objectAssign() {
+                if(arguments.length > 0) {
+                    var newObj = {};
+                    for(var i = 0; i < arguments.length; i++) {
+                        if(Object.prototype.toString.call(arguments[i]) !== '[object Object]') {
+                            console.warn("Parameter must be object");
+                            return;
+                        }
+                        var source = arguments[i];
+                        for(var key in source) {
+                            if(Object.prototype.hasOwnProperty.call(source, key)) {
+                                newObj[key] = source[key];
+                            }
+                        }
+                    }
+                    return newObj;
+                } else {
+                    console.warn("Parameter cannot be null");
+                    return;
+                }
+            }
+            function getQueryParam(url, param) {
+                param = param.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+                var regexS = "[\\?&]" + param + "=([^&#]*)",
+                    regex = new RegExp(regexS),
+                    results = regex.exec(url),
+                    result = '';
+                if (results === null || (results && typeof(results[1]) !== 'string' && results[1].length)) {
+                    return result;
+                } else {
+                    try {
+                        result = decodeURIComponent(results[1]);
+                    } catch (e) {
+                        result = results[1];
+                    };
+                    return result.replace(/\+/g, ' ');
+                }
+            }
+
+            // 公共属性
+            var sa_common_properties = {"login_user_id":"","website_id":33,"i_tag_page":"","i_tag_region":"","i_tag_hyperlink":"","w_tag_page":"","w_tag_region":"","w_tag_hyperlink":"","promotion_source":"emar","platform_id":1,"level_1_page_type_id":"1","level_2_page_type_id":""},
+                loginUserId =  SagetCookie("SA_CUSTOMER_INFO"),
+                saLoginId = SagetCookie("SA_CUSTOMER_ID"),
+                itag = getQueryParam(location.href,'itag') || SagetCookie("_itag") || "",
+                arrayOfitag = itag.split("." , 3),
+                wtag = getQueryParam(location.href,'wtag') || SagetCookie("_wtag") || "",
+                arrayOfwtag = wtag.split("." , 3),
+                platformId = (function(){var isPc = (function() {var userAgentInfo = navigator.userAgent; Agents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"], flag = true; for(var v = 0; v < Agents.length; v++) {if(userAgentInfo.indexOf(Agents[v]) > 0) {flag = false; break; } } return flag; })(); var isWx = (function() {var ua = window.navigator.userAgent.toLowerCase(); return ua.match(/MicroMessenger/i) == 'micromessenger'})(); return isPc ? 1 : isWx ? 5 :2; })();
+            //解决promotion_source全页缓存问题
+            var promotionSource = SagetCookie("CPS_INFO") || "";
+            sa_common_properties = objectAssign(sa_common_properties,{
+                $referrer : PUBLIC_ATTRIBUTES.$referrer,
+                $referrer_host : PUBLIC_ATTRIBUTES.$referrer_host,
+                $url:location.href,
+                $url_path : location.pathname,
+                $title : document.title,
+                i_tag_page : arrayOfitag[0] || "",
+                i_tag_region : arrayOfitag[1] || "",
+                i_tag_hyperlink : arrayOfitag[2] ||"",
+                w_tag_page : arrayOfwtag[0] || "",
+                w_tag_region : arrayOfwtag[1] || "",
+                w_tag_hyperlink : arrayOfwtag[2] ||"",
+                login_user_id : loginUserId || "",
+                platform_id : platformId || "",
+                promotion_source:promotionSource
+            });
+
+            da_sensorsdata.registerPage(sa_common_properties);
+            da_sensorsdata.quick('autoTrack',sa_common_properties);
+            if(saLoginId){da_sensorsdata.login(saLoginId);}
+        })()
+
+    </script>
+    <title>Document</title>
+    <script type="text/javascript">
+        (function (doc, win) {
+            var docEl     = doc.documentElement,
+                isIOS     = navigator.userAgent.match(/iphone|ipod|ipad/gi),
+                dpr       = isIOS ? Math.min(win.devicePixelRatio, 3) : 1,
+                scale     = 1 / dpr,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize'
+            docEl.dataset.dpr = dpr
+            var metaEl = doc.createElement('meta')
+            metaEl.name = 'viewport'
+            metaEl.content = 'initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale
+            docEl.firstElementChild.appendChild(metaEl)
+            var recalc = function () {
+                var width = docEl.clientWidth
+                if (width / dpr > 750) {
+                    width = 750 * dpr
+                }
+                docEl.style.fontSize = 100 * (width / 750) + 'px'
+            }
+            recalc()
+            if (!doc.addEventListener) return
+            win.addEventListener(resizeEvt, recalc, false)
+        })(document, window)
+    </script>
+    <script type="text/javascript" src="https://p4l-assets.azoyacdn.com/skin/frontend/PlumTree/p4l_pc/js/jquery-1.7.min.js"></script>
+    <style>
+        html, body { padding: 0; margin: 0; }
+        .general-module * { padding: 0; margin: 0; }
+        .clearfix:after { content: ""; display: block; clear: both; }
+        .clearfix { zoom: 1; }
+        ul, li { margin: 0; padding: 0; list-style: none; }
+        a { text-decoration: none; -webkit-tap-highlight-color: transparent; outline: none; }
+        img { border: none; border: 0; }
+        .general-two { padding: 0.2rem 0; width: 100%; background: #eb0933; font-family: "Microsoft Yahei", sans-serif; }
+        .general-two .img-title { width: 100%; margin: 0 auto; }
+        .general-two .img-title .hotspot { display: block; width: 100%; }
+        .general-two .img-title .img { display: block; width: 100%; }
+        .general-two .text-title { position: relative; width: 100%; margin: 0 auto; height: 0.8rem; background: #f2741f; line-height: 0.8rem; }
+        .general-two .text-title .hotspot { display: block; width: 100%; height: 100%; font-size: 0.32rem; color: #fff; text-align: center; }
+        .general-two .text-title .more { position: absolute; right: 0.1rem; top: 0.35rem; font-size: 0.24rem; line-height: 0.3rem; }
+        .general-two .tabs { margin: 0.2rem auto 0; width: 100%; height: 0.8rem; overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch; font-size: 0; vertical-align: middle; white-space: nowrap; }
+        .general-two .tabs .tab { display: inline-block; width: 2.15rem; height: 0.8rem; background: #f2741f; font-size: 0.32rem; color: #fff; line-height: 0.8rem; text-align: center; cursor: pointer; }
+        .general-two .tabs .tab.current { background: #ff8431; color: #ffea00; font-weight: bold; }
+        .general-two .tab-content { display: none; }
+        .general-two .tab-content.current { display: block; }
+        .general-two .products { width: 100%; margin: 0.2rem auto 0; overflow: hidden; }
+        .general-two .products .product-list { position: relative; float: left; margin-left: 0.1rem; margin-bottom: 0.1rem; width: 3.6rem; height: 6.2rem; background: #fff; }
+        .general-two .products .goods-link { position: relative; display: block; width: 100%; height: 3.6rem; overflow: hidden; }
+        .general-two .products .goods-link .thumb { display: block; margin: 0.3rem auto; max-width: 3rem; max-height: 3rem; width: auto; height: 3rem; }
+        .general-two .products .goods-info { position: relative; width: 3.32rem; margin: 0 auto; height: 2.6rem; overflow: hidden; }
+        .general-two .products .product-desc { position: absolute; left: 0; top: 0.06rem; height: 0.4rem; line-height: 0.4rem; font-size: 0.34rem; font-weight: bold; color: #000; overflow: hidden; }
+        .general-two .products .product-title { position: absolute; left: 0; top: 0.6rem; height: 0.6rem; line-height: 0.3rem; font-size: 0.24rem; color: #666; overflow: hidden; }
+        .general-two .products .product-price { position: absolute; left: 0; top: 1.1rem; height: 0.4rem; line-height: 0.4rem; }
+        .general-two .products .present-price { color: #f5262e; font-size: 0.36rem; font-weight: bold; }
+        .general-two .products .present-price .symbol { font-size: 0.24rem; font-weight: normal; }
+        .general-two .products .original-price { margin-left: -0.2rem; font-size: 0.24rem; color: #999; text-decoration: line-through; }
+        .general-two .products .product-btn { position: absolute; left: 0; top: 1.9rem; width: 100%; height: 0.6rem; background: #589930; border-radius: 0.05rem; font-size: 0.28rem; color: #fff; line-height: 0.6rem; text-align: center; }
+        .general-two .discount { position: absolute; left: 0.15rem; top: 0.15rem; width: 0.66rem; height: 0.66rem; border-radius: 50%; background: #eb0933; font-size: 0.24rem; line-height: 0.66rem; text-align: center; color: #fff; }
+        .general-two .product-badge { position: absolute; left: 0.2rem; top: 3.12rem; height: 0.36rem; }
+        .general-two .product-badge span { float: left; margin-right: 0.05rem; padding: 0 0.1rem; height: 0.36rem; background: #ea0c30; border-radius: 0.18rem; font-size: 0.24rem; color: #fff; line-height: 0.36rem; }
+
+        .banner { width: 100%; overflow: hidden;}
+        .banner img {display: block; width: 100%;}
+
+        html, body { padding: 0; margin: 0; }
+        img { border: none; border: 0; }
+        * {-webkit-tap-highlight-color:transparent; outline: none;}
+        .cmp-nav-head * {padding: 0; margin: 0;}
+        ul, li {list-style: none;}
+        .cmp-nav-head { position: relative; }
+        .cmp-nav-head .cmp-mask { display: none; position: fixed; top: 0; right: 0; bottom: 0; left: 0; background-color: rgba(0, 0, 0, 0.4); }
+        .cmp-nav-head .cmp-modal { position: relative; z-index: 300; display: none; transition: all .25s ease-in; }
+        .cmp-nav-head .cmp-modal .cmp-modal-title { height: 1rem; line-height: 1rem; padding: 0 0.35rem; color: #ffffff; font-size: .3rem; background-color: #f2741f; }
+        .cmp-nav-head .cmp-modal .icon-arrow-up { position: absolute; right: .08rem; top: .15rem; width: 0.6rem; height: 0.7rem; background: url(http://orw3q8coq.bkt.clouddn.com/active/img/20180306/arrow.png) no-repeat; background-size: contain; }
+        .cmp-nav-head .cmp-modal .cmp-modal-list { padding: 0.3rem .5rem; overflow: hidden; background-color: #ffffff; }
+        .cmp-nav-head .cmp-modal .cmp-modal-list .modal-item { float: left; width: 33.3333%; height: 0.7rem; line-height: 0.7rem; font-size: 0.28rem; text-align: left; }
+        .cmp-nav-head .cmp-modal .cmp-modal-list .modal-item.cls-active { color: #f02b2b; font-weight: bold; }
+        .cmp-nav-head.cls-fixed { position: fixed; top: 0; right: 0; left: 0; z-index: 2; }
+        .cmp-nav-head.cls-modal-active .cmp-modal { display: block; }
+        .cmp-nav-head.cls-modal-active .cmp-scroll-wrap { display: none; }
+        .cmp-nav-head.cls-modal-active .cmp-mask { display: block; }
+        .cmp-scroll-wrap { position: relative; z-index: 100; width: 100%; transition: all .3s ease; height: 1rem; overflow: hidden; background-color: #333; margin: 0 auto; }
+        .cmp-scroll-wrap .anchor-tab { position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: #fff; }
+        .cmp-scroll-wrap .cmp-scroll-box { float: left; height: 100%; background-color: #fff; white-space: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        .cmp-scroll-wrap .cmp-scroll-box .cmp-nav-box { height: 100%; font-size: 0; vertical-align: top; background-color: #fff;}
+        .cmp-scroll-wrap .cmp-scroll-box .cmp-nav-box .cmp-nav-item {display: inline-block; width: 1.7rem; height: 100%; line-height: 1rem; cursor: pointer; background-color: #fff; color: #333; font-size: 0.28rem; text-align: center; overflow: hidden; }
+        .cmp-scroll-wrap .cmp-scroll-box .cmp-nav-box .cmp-nav-item.cls-active { color: #fff; background-color: #f2741f; }
+        .anchor-btn { position: absolute; right: 0; top: 0; height: 100%; width: 0.70rem; opacity: 0.95; box-shadow: -1px 0 1px 0 rgba(0, 0, 0, 0.2); z-index: 100; background: #fff; }
+        .anchor-btn .icon-arrow-down { position: absolute; top: 50%; left: 50%; margin-top: -0.35rem; margin-left: -0.3rem; width: 0.6rem; height: 0.7rem; -ms-transform: rotate(180deg); -moz-transform: rotate(180deg); -o-transform: rotate(180deg); -webkit-transform: rotate(180deg); transform: rotate(180deg); background: url(http://orw3q8coq.bkt.clouddn.com/active/img/20180306/arrow.png) no-repeat; background-size: contain;}
+
+    </style>
+</head>
+<body>
+
+<div class="r-cms">
+    <div class="banner" style="overflow: hidden;">
+        <img src="https://p4l-assets.azoyacdn.com/media/wysiwyg/37-640x400.jpg" alt="" style="display: block; width: 100%;" >
+    </div>
+    <div class="cmp-nav-head" id="_cmp-nav-box">
+        <div class="cmp-scroll-wrap fn-nav-active">
+            <div class="anchor-tab">
+                <div class="cmp-scroll-box">
+                    <ul class="cmp-nav-box">
+
+                    </ul>
+                </div>
+            </div>
+            <div class="anchor-btn js-btn-open">
+                <span class="icon-arrow-down"></span>
+            </div>
+        </div>
+        <div class="cmp-modal">
+            <div class="cmp-modal-title">切换楼层<span class="icon-arrow-up js-btn-close"></span></div>
+            <ul class="cmp-modal-list">
+
+            </ul>
+        </div>
+        <div class="cmp-mask js-mark"></div>
+    </div>
+    <div data-title-text="爆款秒杀" class="general-module general-two module-block clearfix">
+        <div class="product-wrap clearfix">
+            <div class="text-title">
+                <a href="" target="_blank" class="hotspot">
+                    爆款秒杀
+                    <span class="more">more>></span>
+                </a>
+            </div>
+            <div class="products">
+                <ul>
+                    <li class="product-list">
+                        <a href="" target="_blank" class="goods-link sellout">
+                            <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                        </a>
+                        <div class="goods-info clearfix">
+                            <div class="product-desc">促进宝宝消化排便</div>
+                            <div class="product-title"> 爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                            <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                                <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                            </div>
+                            <a href="" target="_blank" class="product-btn">立即购买</a>
+                        </div>
+                        <div class="discount">75折</div>
+                        <div class="product-badge">
+                            <span>特价</span>
+                            <span>全场包邮</span>
+                        </div>
+                    </li>
+                    <li class="product-list">
+                        <a href="" target="_blank" class="goods-link">
+                            <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                        </a>
+                        <div class="goods-info clearfix">
+                            <div class="product-desc">促进宝宝消化排便</div>
+                            <div class="product-title">爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                            <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                                <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                            </div>
+                            <a href="" target="_blank" class="product-btn">立即购买</a>
+                        </div>
+                        <div class="discount">75折</div>
+                        <div class="product-badge">
+                            <span>特价</span>
+                            <span>全场包邮</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div data-title-text="周年庆底价" class="general-module general-two module-block clearfix">
+        <div class="product-wrap clearfix">
+            <div class="text-title">
+                <a href="" target="_blank" class="hotspot">
+                    周年庆底价
+                    <span class="more">more>></span>
+                </a>
+            </div>
+            <div class="products">
+                <ul>
+                    <li class="product-list">
+                        <a href="" target="_blank" class="goods-link sellout">
+                            <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                        </a>
+                        <div class="goods-info clearfix">
+                            <div class="product-desc">促进宝宝消化排便</div>
+                            <div class="product-title"> 爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                            <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                                <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                            </div>
+                            <a href="" target="_blank" class="product-btn">立即购买</a>
+                        </div>
+                        <div class="discount">75折</div>
+                        <div class="product-badge">
+                            <span>特价</span>
+                            <span>全场包邮</span>
+                        </div>
+                    </li>
+                    <li class="product-list">
+                        <a href="" target="_blank" class="goods-link">
+                            <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                        </a>
+                        <div class="goods-info clearfix">
+                            <div class="product-desc">促进宝宝消化排便</div>
+                            <div class="product-title">爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                            <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                                <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                            </div>
+                            <a href="" target="_blank" class="product-btn">立即购买</a>
+                        </div>
+                        <div class="discount">75折</div>
+                        <div class="product-badge">
+                            <span>特价</span>
+                            <span>全场包邮</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div data-title-text="爆款秒杀" class="general-module general-two module-block clearfix">
+        <div class="product-wrap clearfix">
+            <div class="text-title">
+                <a href="" target="_blank" class="hotspot">
+                    爆款秒杀
+                    <span class="more">more>></span>
+                </a>
+            </div>
+            <div class="products">
+                <ul>
+                    <li class="product-list">
+                        <a href="" target="_blank" class="goods-link sellout">
+                            <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                        </a>
+                        <div class="goods-info clearfix">
+                            <div class="product-desc">促进宝宝消化排便</div>
+                            <div class="product-title"> 爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                            <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                                <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                            </div>
+                            <a href="" target="_blank" class="product-btn">立即购买</a>
+                        </div>
+                        <div class="discount">75折</div>
+                        <div class="product-badge">
+                            <span>特价</span>
+                            <span>全场包邮</span>
+                        </div>
+                    </li>
+                    <li class="product-list">
+                        <a href="" target="_blank" class="goods-link">
+                            <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                        </a>
+                        <div class="goods-info clearfix">
+                            <div class="product-desc">促进宝宝消化排便</div>
+                            <div class="product-title">爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                            <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                                <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                            </div>
+                            <a href="" target="_blank" class="product-btn">立即购买</a>
+                        </div>
+                        <div class="discount">75折</div>
+                        <div class="product-badge">
+                            <span>特价</span>
+                            <span>全场包邮</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div data-title-text="周年庆底价" class="general-module general-two module-block clearfix">
+        <div class="product-wrap clearfix">
+            <div class="text-title">
+                <a href="" target="_blank" class="hotspot">
+                    周年庆底价
+                    <span class="more">more>></span>
+                </a>
+            </div>
+            <div class="products">
+                <ul>
+                    <li class="product-list">
+                        <a href="" target="_blank" class="goods-link sellout">
+                            <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                        </a>
+                        <div class="goods-info clearfix">
+                            <div class="product-desc">促进宝宝消化排便</div>
+                            <div class="product-title"> 爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                            <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                                <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                            </div>
+                            <a href="" target="_blank" class="product-btn">立即购买</a>
+                        </div>
+                        <div class="discount">75折</div>
+                        <div class="product-badge">
+                            <span>特价</span>
+                            <span>全场包邮</span>
+                        </div>
+                    </li>
+                    <li class="product-list">
+                        <a href="" target="_blank" class="goods-link">
+                            <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                        </a>
+                        <div class="goods-info clearfix">
+                            <div class="product-desc">促进宝宝消化排便</div>
+                            <div class="product-title">爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                            <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                                <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                            </div>
+                            <a href="" target="_blank" class="product-btn">立即购买</a>
+                        </div>
+                        <div class="discount">75折</div>
+                        <div class="product-badge">
+                            <span>特价</span>
+                            <span>全场包邮</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer" style="width: 100%; height: 9rem;">foortrt</div>
+</div>
+</body>
+<script type="text/javascript">
+    jQuery(function () {
+        var $ = jQuery;
+        function throttle(fn, threshhold, scope) {
+            threshhold || (threshhold = 250)
+            var last,
+                deferTimer;
+            return function () {
+                var context = scope || this;
+                var now  = +new Date,
+                    args = arguments;
+                if (last && now < last + threshhold) {
+                    // hold on to it
+                    clearTimeout(deferTimer);
+                    deferTimer = setTimeout(function () {
+                        last = now;
+                        fn.apply(context, args);
+                    }, threshhold)
+                } else {
+                    last = now;
+                    fn.apply(context, args);
+                }
+            }
+        }
+        var ScrollHandler = (function ($, win) {
+            var doc = document;
+            var body = doc.body;
+            var clientHeight = body.clientHeight;
+            var screenHeight = win.innerHeight;
+            var SOURCE_ATTR = 'target';
+            var navIdxByOffset = function (offset, top) {
+                var i = 0,
+                    len = offset.length;
+                if (!offset || offset.length === 0) return;
+                if (top >= offset[0]) {
+                    for (; i < len; i++) {
+                        if (top >= offset[i] && (top < offset[i + 1] || i === len - 1)) {	// 注意最后一条的时候
+                            break;
+                        }
+                    }
+                } else {
+                    i = 0;
+                }
+                return i !== offset.length ? i : 0;
+            };
+            var ScrollWay = {
+                byGroup: function (len, size, curr, prev) {
+                    if (Math.floor(curr / size) === Math.floor(prev / size)) {
+                        return -1;
+                    }
+                    return curr < Math.floor(len / size) * size ? Math.floor(curr / size) * size : len - size;
+                },
+                byStep: function (len, size, curr) {
+                    var showLen = 2;
+                    if (curr >= size - showLen && curr < len - showLen) {
+                        return curr - showLen;
+                    } else if (curr < size - showLen) {
+                        return 0;
+                    } else {
+                        return len - size;
+                    }
+                }
+            };
+            var changePosition = function (ele, leftX, tamp) {
+               ele.css({
+                    'transform': 'translateX(' + leftX + 'px)',
+                    '-ms-transform': 'translateX(' + leftX + 'px)',
+                    '-moz-transform': 'translateX(' + leftX + 'px)',
+                    '-webkit-transform': 'translateX(' + leftX + 'px)',
+                    '-o-transform': 'translateX(' + leftX + 'px)',
+                    'transition-property': 'all',
+                    '-webkit-transition-property': 'all',
+                    '-moz-transition-property': 'all',
+                    '-o-transition-property': 'all',
+                    'transition-duration': tamp,
+                    '-moz-transition-duration': tamp,
+                    '-webkit-transition-duration': tamp,
+                    '-o-transition-duration': tamp,
+                    'transition-timing-function': 'ease',
+                    '-webkit-transition-timing-function': 'ease',
+                    '-o-transition-timing-function': 'ease',
+                    '-moz-transition-timing-function': 'ease'
+                });
+            };
+            var ScrollHandler = function (opts) {
+                this.opts = $.extend({}, ScrollHandler.defaults, opts);
+                this.$ele = this.opts.element;
+                this.$barBox1 = this.$ele.find('.cmp-nav-box');
+                this.$barBox2 = this.$ele.find('.cmp-modal-list');
+                this.init()
+            };
+            ScrollHandler.prototype = {
+                constructor: ScrollHandler,
+                offset: [],
+                history: [],
+                init: function () {
+                    this.initBar();
+                    this.initView();
+                    this.initData();
+                    this.eventListen();
+                    $(win).on('scroll', throttle(function (e) {
+                        this.handleScroll($(window).scrollTop());
+                    }.bind(this), this.opts.scrollHandleDuration));
+                    this.$head
+                        .on('click', this.getSelector(SOURCE_ATTR), function (e) {
+                            this.scrollToOffset(this.offset[$(e.target).index()])
+                        }.bind(this))
+                        .on('click', '.js-btn-open', this.toggleModal.bind(this))
+                        .on('click', '.js-btn-close', this.toggleModal.bind(this))
+                        .on('touchend', '.js-mark', function (e) {
+                            var evt = e || window.event;
+                            evt.preventDefault();
+                            $(this).parent().toggleClass('cls-modal-active')
+                        })
+                        .on('click', '.cmp-modal-list', function (e) {
+                            var index = $(e.target).index();
+                            this.$headNavs.eq(index).click();
+                            this.toggleModal();
+                        }.bind(this));
+                },
+                eventListen: function () {
+                    var startPosition, endPosition, X,scrollX, _self = this, curTranslate, $scrollBox = _self.$ele.find('.cmp-scroll-box');
+                    var ele = document.getElementsByClassName('cmp-scroll-box')[0];
+                    ele.addEventListener('touchstart', function (e) {
+                        var evt = e || window.event;
+                        evt.stopPropagation();
+                        startPosition = {
+                            client_x: evt.targetTouches[0].clientX
+                        };
+                        _self.opts.isAnimation = false;
+                        curTranslate = Math.floor($scrollBox.css('transform').split(/,/)[4]);
+                    },false);
+                    ele.addEventListener('touchmove', function (e) {
+                        if(!_self.opts.isAnimation) {
+                            var evt = e || window.event;
+                            evt.stopPropagation();
+                            endPosition = {
+                                client_x: evt.changedTouches[0].clientX
+                            };
+                            curTranslate = Math.floor($scrollBox.css('transform').split(/,/)[4]);
+                            X = Math.floor(endPosition.client_x - startPosition.client_x);
+                            if (X > 0){
+                                scrollX = curTranslate + X >= 0 ? 0 : curTranslate + X;
+                                changePosition($(this), scrollX, '200ms');
+                            } else if ( X < 0 ) {
+                                var maxX = -_self.leftOffet[_self.leftOffet.length - _self.opts.navItemCountScroll];
+                                scrollX = curTranslate + X <= maxX ? maxX : curTranslate + X;
+                                changePosition($(this), scrollX, '200ms')
+                            }
+                        }
+                    });
+                    ele.addEventListener('touchend', function (e) {
+                        _self.opts.isAnimation = true;
+                    });
+
+                },
+                initBar: function () {
+                    var str1 = '', str2 = '';
+                    $('.' + this.opts.clsModule ).each(function (index) {
+                        $(this).attr('data-tag', 'station-' + (index + 1));
+                        str1 += '<li class="cmp-nav-item" data-target="station-' + (index + 1) + '">' + $(this).data('titleText') + '</li>';
+                        str2 += '<li class="modal-item">' + $(this).data('titleText') + '</li>';
+                    });
+                    this.$barBox1.html(str1);
+                    this.$barBox2.html(str2);
+                },
+                initView: function () {
+                    this.$head = this.$ele;
+                    this.$headNavs = this.$head.find(this.getSelector(SOURCE_ATTR));
+                    this.navLength = this.$headNavs.length;
+                    this.$modalItemList = this.$head.find('.cmp-modal-list .modal-item');
+                    this.$scrollBox = this.$head.find('.cmp-scroll-box');
+
+                    if (!this.shouldNavScroll()) {
+                        this.$scrollBox.css({'overflow-x': 'hidden', 'width': '100%'});
+                        this.$headNavs.css({'width': 90 / this.navLength + '%'});
+                    }
+                },
+                initData: function () {
+                    var opts = this.opts;
+                    var navHeight = this.$head.outerHeight();
+                    var tags = this.$headNavs.map(function (index, item) {
+                        return $(item).data(SOURCE_ATTR);
+                    });
+                    this.$target = $('body').find(this.getSelector(opts.targetAttr));
+                    this.headOffset = this.$head.offset().top;
+                    if (!this.$target || this.$target.length === 0) {
+                        throw new Error('导航栏标签错误');
+                    }
+                    try {
+                        // 缓存offset
+                        this.offset = $.makeArray(tags).map(function (item) {
+                            return Math.ceil(this.$target.filter(this.getSelector(opts.targetAttr, item)).eq(0).offset().top - navHeight * 2);
+                        }.bind(this));
+                        this.leftOffet = $.makeArray(this.$headNavs).map(function (item) {
+                            return $(item).offset().left;
+                        })
+                    } catch (e) {
+                        throw new Error('标签找不到对应的元素');
+                    }
+                },
+                handleScroll: function (top) {
+                    var opts = this.opts;
+                    var index = navIdxByOffset(this.offset, top);
+                    if (!opts.isAlwaysShow && opts.criticalVal) {
+
+                        $(window, document).scrollTop() <= opts.criticalVal ? this.$head.removeClass(opts.clsNavActive) :  this.$head.addClass(opts.clsNavActive);
+                    }else {
+                        $(window, document).scrollTop() <= this.headOffset ? this.$head.removeClass(opts.clsNavActive) :  this.$head.addClass(opts.clsNavActive);
+                    }
+                    this.activeNavItem(index);
+                    this.handleNavRegion(index);
+                },
+                activeNavItem: function (idx) {
+                    var clsActive = this.opts.clsNavItemActive;
+                    this.$headNavs.removeClass(clsActive).eq(idx).addClass(clsActive);
+                    this.$modalItemList.removeClass(clsActive).eq(idx).addClass(clsActive);
+                },
+                handleNavRegion: function (idx) {	// idx 从 0 开始到length - 1
+                    var prevIndex = this.history[this.history.length - 1];
+                    if (!this.shouldNavScroll() || prevIndex === idx) return;
+                    this.scrollNavToItem(
+                        ScrollWay[this.opts.scrollNavWay.toLowerCase() === 'group' ? 'byGroup' : 'byStep'](
+                            this.navLength, this.opts.navItemCountScroll, idx, prevIndex));
+                    this.history.push(idx);
+                },
+                scrollToOffset: function (offsetTop) {
+                    $(win).scrollTop(offsetTop + 10);
+                },
+                shouldNavScroll: function () {
+                    return this.navLength >= this.opts.navItemCountScroll;
+                },
+                scrollNavToItem: function (idx) {
+                    idx >= 0 && changePosition(this.$scrollBox, -this.leftOffet[idx], '400ms')
+                },
+                getSelector: function (dataName, value) {
+                    return !value ? '[data-' + dataName + ']' : '[data-' + dataName + '="' + value + '"]';
+                },
+                toggleModal: function () {
+                    this.$head.toggleClass('cls-modal-active');
+                }
+            };
+
+            ScrollHandler.defaults = {
+                navItemCountScroll: 4,	// 小于该项时候不滚动
+                scrollNavWay: 'step', // step, group
+                clsNavActive: 'cls-fixed',
+                clsNavItemActive: 'cls-active',
+                clsModule: 'module-block', //默认各个模块共同的className
+                targetAttr: 'tag',	// target data属性名称
+                scrollHandleDuration: 40,	// throttle time
+                criticalVal: 500, // 大于500的时候侧边栏显示
+                isAlwaysShow: false,	// 是否显示头部
+                isAnimation: false // 是否在滑动，防止多次操作，影响体验
+            };
+            return ScrollHandler;
+        }($, window));
+
+        $.fn.scrollHandle = function (opts) {
+            return new ScrollHandler($.extend({}, opts, {element: this}));
+        };
+        $('#_cmp-nav-box').scrollHandle();
+    });
+</script>
+</html>
+

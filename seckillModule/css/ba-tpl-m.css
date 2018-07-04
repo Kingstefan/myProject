@@ -1,0 +1,110 @@
+html, body { padding: 0; margin: 0; }
+
+.seckill-module * { padding: 0; margin: 0; }
+
+.clearfix:after { content: ""; display: block; clear: both; }
+
+.clearfix { zoom: 1; }
+
+ul, li { margin: 0; padding: 0; list-style: none; }
+
+a { text-decoration: none; -webkit-tap-highlight-color: transparent; outline: none; }
+
+img { border: none; border: 0; }
+
+.seckill-module { padding: 0.2rem 0; width: 100%; background: #320779; font-family: "Microsoft Yahei", sans-serif; }
+.seckill-module .img-title { width: 100%; margin: 0 auto; }
+.seckill-module .img-title .img { display: block; width: 100%; }
+.seckill-module .text-title { position: relative; width: 100%; margin: 0 auto; height: 0.8rem; background: #f31f47; line-height: 0.8rem; font-size: 0.32rem; color: #fff; text-align: center; }
+.seckill-module .seckill-date { width: 100%; margin: 0.2rem auto 1px; height: 0.8rem; background: #fff; color: #ea333f; text-align: center; overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch; font-size: 0; white-space: nowrap; vertical-align: middle; }
+.seckill-module .seckill-date .date-item { display: inline-block; width: 1.7rem; height: 0.8rem; line-height: 0.8rem; font-size: 0.24rem; color: #ea333f; text-align: center; }
+.seckill-module .seckill-date .date-item.current { font-weight: bold; }
+.seckill-module .seckill-countdown { display: none; width: 100%; margin: 0 auto; height: 0.9rem; background: #fff; color: #ea333f; text-align: center; }
+.seckill-module .seckill-countdown .countdown-item { float: left; padding-top: 0.15rem; width: 33.333%; height: 0.75rem; cursor: pointer; }
+.seckill-module .seckill-countdown .countdown-item.current { background: #d9d9d9; }
+.seckill-module .seckill-countdown .spieltag-text, .seckill-module .seckill-countdown .countdown { display: block; height: 0.3rem; line-height: 0.3rem; font-size: 0.22rem; }
+.seckill-module .seckill-countdown .spieltag-text { font-size: 0.24rem; }
+.seckill-module .seckill-countdown.current { display: block; }
+.seckill-module .seckill-products { display: none; padding-top: 0.2rem; padding-bottom: 0.1rem; width: 100%; margin: 0 auto; overflow: hidden; }
+.seckill-module .seckill-products .discount { position: absolute; left: 0.15rem; top: 0.15rem; width: 0.66rem; height: 0.66rem; border-radius: 50%; background: #eb0933; font-size: 0.24rem; line-height: 0.66rem; text-align: center; color: #fff; }
+.seckill-module .seckill-products .product-btn.over { background: #999; }
+.seckill-module .seckill-products.current { display: block; }
+.seckill-module .seckill-products-6, .seckill-module .seckill-products-5 { padding-bottom: 0.2rem; }
+.seckill-module .seckill-products-1 .discount { position: absolute; left: 0.3rem; top: 0.3rem; width: 0.66rem; height: 0.66rem; border-radius: 50%; background: #eb0933; font-size: 0.24rem; line-height: 0.66rem; text-align: center; color: #fff; }
+.seckill-module .seckill-products-1 .product-list { position: relative; margin: 0 auto 0.1rem; width: 7.3rem; height: 3.4rem; background: #fff; }
+.seckill-module .seckill-products-1 .goods-link { position: relative; display: block; float: left; margin-right: 0.2rem; width: 3.4rem; height: 100%; overflow: hidden; }
+.seckill-module .seckill-products-1 .goods-link .thumb { display: block; margin: 0.2rem auto; max-width: 3rem; max-height: 3rem; width: auto; height: 3rem; }
+.seckill-module .seckill-products-1 .goods-info { position: relative; float: left; width: 3.5rem; height: 100%; overflow: hidden; }
+.seckill-module .seckill-products-1 .product-desc { position: absolute; left: 0; top: 0.55rem; width: 100%; height: 0.4rem; line-height: 0.4rem; font-size: 0.34rem; font-weight: bold; color: #000; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.seckill-module .seckill-products-1 .product-title { position: absolute; left: 0; top: 1.05rem; height: 0.6rem; line-height: 0.3rem; font-size: 0.24rem; color: #666; overflow: hidden; }
+.seckill-module .seckill-products-1 .product-badge { position: absolute; left: 0; top: 1.92rem; overflow: hidden; }
+.seckill-module .seckill-products-1 .product-badge span { float: left; margin-right: 0.06rem; padding: 0.03rem 0.05rem; border: 1px dashed #f5262e; font-size: 0.24rem; color: #f5262e; }
+.seckill-module .seckill-products-1 .product-price { position: absolute; left: 0; top: 2.5rem; height: 0.8rem; }
+.seckill-module .seckill-products-1 .present-price { display: block; color: #f5262e; font-size: 0.36rem; line-height: 0.4rem; }
+.seckill-module .seckill-products-1 .original-price { display: block; font-size: 0.24rem; color: #999; text-decoration: line-through; line-height: 0.34rem; }
+.seckill-module .seckill-products-1 .product-btn { position: absolute; left: 2.7rem; top: 2.4rem; width: 0.8rem; height: 0.8rem; background: #589930 url(http://orw3q8coq.bkt.clouddn.com/active/img/20180312/car.png) no-repeat; background-size: 100% 100%; border-radius: 0.16rem; }
+.seckill-module .seckill-products-2 .product-badge { position: absolute; left: 0.2rem; top: 3.12rem; height: 0.36rem; overflow: hidden; }
+.seckill-module .seckill-products-2 .product-badge span { float: left; margin-right: 0.05rem; padding: 0 0.1rem; height: 0.36rem; background: #ea0c30; border-radius: 0.18rem; font-size: 0.24rem; color: #fff; line-height: 0.36rem; }
+.seckill-module .seckill-products-2 .product-list { position: relative; float: left; margin-left: 0.1rem; margin-bottom: 0.1rem; width: 3.6rem; height: 6.35rem; background: #fff; }
+.seckill-module .seckill-products-2 .goods-link { position: relative; display: block; width: 100%; height: 3.6rem; overflow: hidden; }
+.seckill-module .seckill-products-2 .goods-link .thumb { display: block; margin: 0.3rem auto; max-width: 3rem; max-height: 3rem; width: auto; height: 3rem; }
+.seckill-module .seckill-products-2 .goods-info { position: relative; width: 3.32rem; margin: 0 auto; height: 2.75rem; overflow: hidden; }
+.seckill-module .seckill-products-2 .product-desc { position: absolute; left: 0; top: 0.06rem; height: 0.4rem; width: 100%; line-height: 0.4rem; font-size: 0.34rem; font-weight: bold; color: #000; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.seckill-module .seckill-products-2 .product-title { position: absolute; left: 0; top: 0.56rem; height: 0.6rem; line-height: 0.3rem; font-size: 0.24rem; color: #666; overflow: hidden; }
+.seckill-module .seckill-products-2 .product-price { position: absolute; left: 0; top: 1.23rem; height: 0.8rem; }
+.seckill-module .seckill-products-2 .present-price { display: block; color: #f5262e; font-size: 0.36rem; line-height: 0.4rem; }
+.seckill-module .seckill-products-2 .original-price { display: block; font-size: 0.24rem; color: #999; text-decoration: line-through; line-height: 0.34rem; }
+.seckill-module .seckill-products-2 .product-btn { position: absolute; left: 0; top: 2.03rem; width: 100%; height: 0.6rem; background: #589930; border-radius: 0.05rem; font-size: 0.28rem; color: #fff; line-height: 0.6rem; text-align: center; }
+.seckill-module .seckill-products-3 .product-badge { position: absolute; left: 0.2rem; top: 2rem; height: 0.3rem; overflow: hidden; }
+.seckill-module .seckill-products-3 .product-badge span { float: left; margin-right: 0.05rem; padding: 0 0.1rem; height: 0.3rem; background: #ea0c30; border-radius: 0.15rem; font-size: 0.2rem; color: #fff; line-height: 0.3rem; }
+.seckill-module .seckill-products-3 .product-list { position: relative; float: left; margin-left: 0.1rem; margin-bottom: 0.1rem; width: 2.36rem; height: 4.8rem; background: #fff; }
+.seckill-module .seckill-products-3 .goods-link { position: relative; display: block; width: 100%; height: 2.36rem; overflow: hidden; }
+.seckill-module .seckill-products-3 .goods-link .thumb { display: block; margin: 0.08rem auto; max-width: 2.2rem; max-height: 2.2rem; width: auto; height: 2.2rem; }
+.seckill-module .seckill-products-3 .goods-info { position: relative; width: 2.08rem; margin: 0 auto; height: 2.45rem; overflow: hidden; }
+.seckill-module .seckill-products-3 .product-desc { position: absolute; left: 0; top: 0.06rem; width: 100%; height: 0.32rem; line-height: 0.32rem; font-size: 0.28rem; font-weight: bold; color: #000; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.seckill-module .seckill-products-3 .product-title { position: absolute; left: 0; top: 0.46rem; height: 0.56rem; line-height: 0.28rem; font-size: 0.22rem; color: #666; overflow: hidden; }
+.seckill-module .seckill-products-3 .product-price { position: absolute; left: 0; top: 1.12rem; height: 0.7rem; overflow: hidden; }
+.seckill-module .seckill-products-3 .present-price { display: block; color: #f5262e; font-size: 0.3rem; line-height: 0.4rem; }
+.seckill-module .seckill-products-3 .original-price { display: block; font-size: 0.22rem; color: #999; text-decoration: line-through; line-height: 0.3rem; }
+.seckill-module .seckill-products-3 .product-btn { position: absolute; left: 0; top: 1.86rem; width: 100%; height: 0.46rem; background: #589930; border-radius: 0.05rem; font-size: 0.22rem; color: #fff; line-height: 0.46rem; text-align: center; }
+.seckill-module .seckill-products-4 .product-list { position: relative; float: left; margin-left: 0.1rem; margin-bottom: 0.1rem; width: 2.36rem; height: 4.7rem; background: #fff; }
+.seckill-module .seckill-products-4 .goods-link { position: relative; display: block; width: 100%; height: 2.36rem; overflow: hidden; }
+.seckill-module .seckill-products-4 .goods-link .thumb { display: block; margin: 0.08rem auto; max-width: 2.2rem; max-height: 2.2rem; width: auto; height: 2.2rem; }
+.seckill-module .seckill-products-4 .goods-info { position: relative; width: 2.08rem; margin: 0 auto; height: 2.34rem; overflow: hidden; }
+.seckill-module .seckill-products-4 .product-desc { position: absolute; left: 0; top: 0.06rem; height: 0.32rem; line-height: 0.32rem; font-size: 0.28rem; font-weight: bold; color: #000; overflow: hidden; }
+.seckill-module .seckill-products-4 .product-title { position: absolute; left: 0; top: 0.46rem; height: 0.56rem; line-height: 0.28rem; font-size: 0.22rem; color: #666; overflow: hidden; }
+.seckill-module .seckill-products-4 .product-badge { position: absolute; left: 0; top: 1.1rem; overflow: hidden; }
+.seckill-module .seckill-products-4 .product-badge span { float: left; margin-right: 0.1rem; padding: 0.03rem 0.06rem; border: 1px dashed #eb0933; font-size: 0.2rem; color: #eb0933; }
+.seckill-module .seckill-products-4 .product-price { position: absolute; left: 0; top: 1.6rem; height: 0.6rem; line-height: 0.3rem; overflow: hidden; }
+.seckill-module .seckill-products-4 .present-price { display: block; color: #f5262e; font-size: 0.3rem; font-weight: bold; }
+.seckill-module .seckill-products-4 .present-price .symbol { font-size: 0.22rem; font-weight: normal; }
+.seckill-module .seckill-products-4 .original-price { display: block; font-size: 0.22rem; color: #999; text-decoration: line-through; }
+.seckill-module .seckill-products-4 .product-btn { position: absolute; right: 0; top: 1.6rem; width: 0.6rem; height: 0.6rem; background: #589930 url(http://orw3q8coq.bkt.clouddn.com/active/img/20180312/car.png) no-repeat; border-radius: 0.14rem; background-size: 100% 100%; }
+.seckill-module .seckill-products-5 .product-badge { position: absolute; left: 0.2rem; top: 2.4rem; height: 0.3rem; overflow: hidden; }
+.seckill-module .seckill-products-5 .product-badge span { float: left; margin-right: 0.05rem; padding: 0 0.1rem; height: 0.3rem; background: #ea0c30; border-radius: 0.15rem; font-size: 0.2rem; color: #fff; line-height: 0.3rem; }
+.seckill-module .seckill-products-5 .product-list { position: relative; float: left; margin-left: 0.1rem; width: 2.8rem; height: 5.2rem; background: #fff; }
+.seckill-module .seckill-products-5 .goods-link { position: relative; display: block; width: 100%; height: 2.8rem; overflow: hidden; }
+.seckill-module .seckill-products-5 .goods-link .thumb { display: block; margin: 0.2rem auto; max-width: 2.4rem; max-height: 2.4rem; width: auto; height: 2.4rem; }
+.seckill-module .seckill-products-5 .goods-info { position: relative; width: 2.52rem; margin: 0 auto; height: 2.4rem; overflow: hidden; }
+.seckill-module .seckill-products-5 .product-desc { position: absolute; left: 0; top: 0.06rem; width: 100%; height: 0.32rem; line-height: 0.32rem; font-size: 0.28rem; font-weight: bold; color: #000; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.seckill-module .seckill-products-5 .product-title { position: absolute; left: 0; top: 0.46rem; height: 0.56rem; line-height: 0.28rem; font-size: 0.22rem; color: #666; overflow: hidden; }
+.seckill-module .seckill-products-5 .product-price { position: absolute; left: 0; top: 1.06rem; height: 0.7rem; overflow: hidden; }
+.seckill-module .seckill-products-5 .present-price { display: block; color: #f5262e; font-size: 0.3rem; line-height: 0.4rem; }
+.seckill-module .seckill-products-5 .original-price { display: block; font-size: 0.22rem; color: #999; text-decoration: line-through; line-height: 0.3rem; }
+.seckill-module .seckill-products-5 .product-btn { position: absolute; left: 0; top: 1.82rem; width: 100%; height: 0.46rem; background: #589930; border-radius: 0.05rem; font-size: 0.22rem; color: #fff; line-height: 0.46rem; text-align: center; }
+.seckill-module .seckill-products-6 .product-list { position: relative; float: left; margin-left: 0.1rem; width: 2.8rem; height: 5.1rem; background: #fff; }
+.seckill-module .seckill-products-6 .goods-link { position: relative; display: block; width: 100%; height: 2.8rem; overflow: hidden; }
+.seckill-module .seckill-products-6 .goods-link .thumb { display: block; margin: 0.2rem auto; max-width: 2.4rem; max-height: 2.4rem; width: auto; height: 2.4rem; }
+.seckill-module .seckill-products-6 .goods-info { position: relative; width: 2.52rem; margin: 0 auto; height: 2.3rem; overflow: hidden; }
+.seckill-module .seckill-products-6 .product-desc { position: absolute; left: 0; top: 0.06rem; height: 0.32rem; line-height: 0.32rem; font-size: 0.28rem; font-weight: bold; color: #000; overflow: hidden; }
+.seckill-module .seckill-products-6 .product-title { position: absolute; left: 0; top: 0.46rem; height: 0.56rem; line-height: 0.28rem; font-size: 0.22rem; color: #666; overflow: hidden; }
+.seckill-module .seckill-products-6 .product-badge { position: absolute; left: 0; top: 1.15rem; overflow: hidden; }
+.seckill-module .seckill-products-6 .product-badge span { float: left; margin-right: 0.1rem; padding: 0.03rem 0.06rem; border: 1px dashed #eb0933; font-size: 0.2rem; color: #eb0933; }
+.seckill-module .seckill-products-6 .product-price { position: absolute; left: 0; top: 1.6rem; height: 0.6rem; line-height: 0.3rem; overflow: hidden; }
+.seckill-module .seckill-products-6 .present-price { display: block; color: #f5262e; font-size: 0.3rem; font-weight: bold; }
+.seckill-module .seckill-products-6 .present-price .symbol { font-size: 0.22rem; font-weight: normal; }
+.seckill-module .seckill-products-6 .original-price { display: block; font-size: 0.22rem; color: #999; text-decoration: line-through; }
+.seckill-module .seckill-products-6 .product-btn { position: absolute; right: 0; top: 1.6rem; width: 0.6rem; height: 0.6rem; background: #589930 url(http://orw3q8coq.bkt.clouddn.com/active/img/20180312/car.png) no-repeat; border-radius: 0.14rem; background-size: 100% 100%; }
+.seckill-module .seckill-products-1 .product-btn.over, .seckill-module .seckill-products-4 .product-btn.over, .seckill-module .seckill-products-6 .product-btn.over { font-size: 0 !important; background: #999 url(http://orw3q8coq.bkt.clouddn.com/active/img/20180312/car.png) no-repeat; background-size: 100% 100%; }
+
+

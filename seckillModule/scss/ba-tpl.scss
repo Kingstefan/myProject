@@ -1,0 +1,1088 @@
+html, body { padding: 0; margin: 0; }
+.seckill-module * { padding: 0; margin: 0; }
+.clearfix:after { content: ""; display: block; clear: both; }
+.clearfix { zoom: 1; }
+a {  text-decoration: none;
+    -webkit-tap-highlight-color: transparent;}
+img { display: block;border: none;}
+ul, li { margin: 0; padding: 0; list-style: none; }
+
+.seckill-module {
+    padding: 20px 0;
+    width: 100%;
+    background: #a8a8a8;
+    font-family: "Microsoft Yahei", sans-serif;
+    .product-wrap {
+        width: 990px;
+        margin: 0 auto;
+    }
+    .img-title {
+        width: 990px;
+        margin: 0 auto;
+        .img {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    .text-title {
+        position: relative;
+        width: 990px;
+        margin: 0 auto;
+        height: 60px;
+        background: #c81d1d;
+        line-height: 60px;
+        font-size: 26px;
+        color: #fff;
+        text-align: center;
+    }
+    .seckill-date {
+        width: 990px;
+        margin: 15px auto 0;
+        height: 60px;
+        background: #fff;
+        border: 1px solid #a8a8a8;
+        .date-item {
+            float: left;
+            width: 20%;
+            height: 60px;
+            line-height: 60px;
+            font-size: 16px;
+            color: #ea333f;
+            text-align: center;
+        }
+        .date-item.current {
+            font-weight: bold;
+        }
+    }
+    .seckill-countdown {
+        display: none;
+       width: 990px;
+       margin: 0 auto;
+       height: 70px;
+       background: #fff;
+       color: #ea333f;
+       text-align: center;
+       .countdown-item {
+           float: left;
+           padding-top: 10px;
+           width: 33.333%;
+           height: 60px;
+           cursor: pointer;
+       }
+       .countdown-item.current {
+           background: #d9d9d9;
+       }
+       .spieltag-text, .countdown {
+           display: block;
+           height: 25px;
+           line-height: 25px;
+           font-size: 14px;
+       }
+       .spieltag-text {
+           font-size: 16px;
+           font-weight: bold;
+       }
+   }
+    .seckill-countdown.current {
+        display: block;
+    }
+    .seckill-products {
+        display: none;
+        padding-top: 10px;
+        .discount {
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #f5252d;
+            font-size: 16px;
+            line-height: 50px;
+            text-align: center;
+            color: #fff;
+        }
+        .product-btn.over {
+            background: #999;
+        }
+    }
+    .seckill-products.current {
+        display: block;
+    }
+    .seckill-products-1 {
+        .product-list {
+            position: relative;
+            margin-bottom: 10px;
+            width: 990px;
+            height: 260px;
+            background: #fff;
+        }
+        .goods-link {
+            position: relative;
+            display: block;
+            float: left;
+            margin: 0 105px;
+            width: 260px;
+            height: 100%;
+            overflow: hidden;
+            .thumb {
+                display: block;
+                margin: 20px auto;
+                max-width: 220px;
+                max-height: 220px;
+                width: auto;
+                height: 220px;
+            }
+        }
+        .goods-info {
+            position: relative;
+            float: left;
+            width: 410px;
+            height: 100%;
+            overflow: hidden;
+        }
+        .product-desc {
+            position: absolute;
+            left: 0;
+            top: 38px;
+            width: 100%;
+            height: 30px;
+            line-height: 30px;
+            font-size: 26px;
+            font-weight: bold;
+            color: #333;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .product-title {
+            position: absolute;
+            left: 0;
+            top: 78px;
+            height: 40px;
+            line-height: 20px;
+            font-size: 16px;
+            color: #666;
+            overflow: hidden;
+        }
+        .product-badge {
+            position: absolute;
+            left: 0;
+            top: 135px;
+            overflow: hidden;
+            span {
+                float: left;
+                margin-right: 5px;
+                padding: 3px 5px;
+                border: 1px dashed #f5252d;
+                font-size: 12px;
+                color: #f5252d;
+            }
+        }
+        .product-price {
+            position: absolute;
+            left: 0;
+            top: 180px;
+        }
+        .present-price {
+            display: block;
+            color: #f5252d;
+            font-size: 26px;
+            line-height: 30px;
+        }
+        .original-price {
+            display: block;
+            font-size: 16px;
+            color: #999;
+            text-decoration: line-through;
+            line-height: 20px;
+        }
+        .product-btn {
+            position: absolute;
+            left: 190px;
+            top: 185px;
+            width: 100px;
+            height: 42px;
+            background: #589930;
+            font-size: 14px;
+            color: #fff;
+            text-align: center;
+            line-height: 42px;
+        }
+    }
+    .seckill-products-2 {
+        ul {
+            margin-right: -20px;
+        }
+        .product-list {
+            position: relative;
+            float: left;
+            margin-right: 20px;
+            margin-bottom: 10px;
+            width: 485px;
+            height: 250px;
+            background: #fff;
+        }
+        .goods-link {
+            position: relative;
+            display: block;
+            float: left;
+            margin: 15px 0;
+            width: 220px;
+            height: 220px;
+            overflow: hidden;
+            .thumb {
+                display: block;
+                margin: 0 auto;
+                max-width: 200px;
+                max-height: 200px;
+                width: auto;
+                height: 200px;
+            }
+        }
+        .goods-info {
+            position: relative;
+            float: left;
+            width: 250px;
+            height: 100%;
+            overflow: hidden;
+        }
+        .product-desc {
+            position: absolute;
+            left: 0;
+            top: 38px;
+            width: 100%;
+            height: 30px;
+            line-height: 30px;
+            font-size: 26px;
+            font-weight: bold;
+            color: #333;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .product-title {
+            position: absolute;
+            left: 0;
+            top: 78px;
+            height: 40px;
+            line-height: 20px;
+            font-size: 16px;
+            color: #666;
+            overflow: hidden;
+        }
+        .product-badge {
+            position: absolute;
+            left: 0;
+            top: 146px;
+            overflow: hidden;
+            span {
+                float: left;
+                margin-right: 5px;
+                padding: 3px 5px;
+                border: 1px dashed #f5252d;
+                font-size: 12px;
+                color: #f5252d;
+            }
+        }
+        .product-price {
+            position: absolute;
+            left: 0;
+            top: 185px;
+        }
+        .present-price {
+            display: block;
+            color: #f5252d;
+            font-size: 22px;
+            line-height: 26px;
+        }
+        .original-price {
+            display: block;
+            font-size: 14px;
+            color: #999;
+            text-decoration: line-through;
+            line-height: 18px;
+        }
+        .product-btn {
+            position: absolute;
+            right: 0;
+            top: 190px;
+            width: 80px;
+            height: 32px;
+            background: #589930;
+            font-size: 14px;
+            color: #fff;
+            text-align: center;
+            line-height: 32px;
+        }
+    }
+    .seckill-products-3 {
+        ul {
+            margin-right: -15px;
+        }
+        .product-list {
+            position: relative;
+            float: left;
+            margin-right: 15px;
+            margin-bottom: 10px;
+            width: 320px;
+            height: 400px;
+            background: #fff;
+            &:hover {
+                .product-title {
+                    height: 36px;
+                    white-space: normal;
+                }
+                .product-badge {
+                    top: 75px;
+                }
+                .product-price {
+                    top: 105px;
+                }
+                .product-btn {
+                    top: 105px;
+                }
+            }
+        }
+        .goods-link {
+            position: relative;
+            display: block;
+            margin: 0 auto;
+            width: 260px;
+            height: 260px;
+            overflow: hidden;
+            .thumb {
+                display: block;
+                margin: 20px auto;
+                max-width: 220px;
+                max-height: 220px;
+                width: auto;
+                height: 220px;
+            }
+        }
+        .goods-info {
+            position: relative;
+            margin: 0 auto;
+            width: 280px;
+            height: 140px;
+            overflow: hidden;
+        }
+        .product-desc {
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 100%;
+            height: 20px;
+            line-height: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .product-title {
+            position: absolute;
+            left: 0;
+            top: 30px;
+            width: 100%;
+            height: 18px;
+            line-height: 18px;
+            font-size: 14px;
+            color: #666;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            transition: all .3s ease;
+        }
+        .product-badge {
+            position: absolute;
+            left: 0;
+            top: 62px;
+            transition: all .3s ease;
+            overflow: hidden;
+            span {
+                float: left;
+                margin-right: 5px;
+                padding: 3px;
+                border: 1px dashed #f5252d;
+                font-size: 12px;
+                color: #f5252d;
+            }
+        }
+        .product-price {
+            position: absolute;
+            left: 0;
+            top: 97px;
+            height: 32px;
+            transition: all .3s ease;
+        }
+        .present-price {
+            margin-right: 5px;
+            float: left;
+            color: #f5252d;
+            font-size: 20px;
+            line-height: 32px;
+        }
+        .original-price {
+            float: left;
+            font-size: 14px;
+            color: #999;
+            text-decoration: line-through;
+            line-height: 38px;
+        }
+        .product-btn {
+            position: absolute;
+            right: 0;
+            top: 98px;
+            width: 66px;
+            height: 26px;
+            background: #589930;
+            font-size: 14px;
+            color: #fff;
+            text-align: center;
+            line-height: 26px;
+            transition: all .3s ease;
+        }
+    }
+    .seckill-products-4 {
+        ul {
+            width: 1000px;
+            margin-right: -10px;
+        }
+        .product-list {
+            position: relative;
+            float: left;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            width: 240px;
+            height: 390px;
+            background: #fff;
+            transition: all .3s ease;
+            &:hover {
+                box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.15);
+            }
+        }
+        .goods-link {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 240px;
+            overflow: hidden;
+            .thumb {
+                display: block;
+                margin: 10px auto;
+                max-width: 220px;
+                max-height: 220px;
+                width: auto;
+                height: 220px;
+            }
+        }
+        .goods-info {
+            position: relative;
+            margin: -2px auto 0;
+            width: 220px;
+            height: 152px;
+            overflow: hidden;
+        }
+        .product-desc {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 24px;
+            line-height: 24px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .product-title {
+            position: absolute;
+            left: 0;
+            top: 25px;
+            height: 36px;
+            line-height: 18px;
+            font-size: 14px;
+            color: #666;
+            overflow: hidden;
+        }
+        .product-badge {
+            position: absolute;
+            left: 0;
+            top: 70px;
+            overflow: hidden;
+            span {
+                float: left;
+                margin-right: 5px;
+                padding: 3px 5px;
+                border: 1px dashed #f5252d;
+                font-size: 12px;
+                color: #f5252d;
+            }
+        }
+        .product-price {
+            position: absolute;
+            left: 0;
+            top: 100px;
+        }
+        .present-price {
+            display: block;
+            color: #f5252d;
+            font-size: 20px;
+            line-height: 26px;
+        }
+        .original-price {
+            display: block;
+            font-size: 14px;
+            color: #999;
+            text-decoration: line-through;
+            line-height: 18px;
+        }
+        .product-btn {
+            position: absolute;
+            right: 0;
+            top: 106px;
+            width: 70px;
+            height: 34px;
+            background: #589930;
+            font-size: 14px;
+            color: #fff;
+            text-align: center;
+            line-height: 34px;
+        }
+    }
+    .seckill-products-5 {
+        ul {
+            margin-right: -10px;
+        }
+        .product-list {
+            position: relative;
+            float: left;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            width: 190px;
+            height: 335px;
+            background: #fff;
+            &:hover {
+                .product-title {
+                    height: 36px;
+                    white-space: normal;
+                }
+                .product-badge {
+                    top: 78px;
+                }
+                .product-price {
+                    top: 105px;
+                }
+                .product-btn {
+                    top: 116px;
+                }
+            }
+        }
+        .goods-link {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 190px;
+            overflow: hidden;
+            .thumb {
+                display: block;
+                margin: 15px auto;
+                max-width: 160px;
+                max-height: 160px;
+                width: auto;
+                height: 160px;
+            }
+        }
+        .goods-info {
+            position: relative;
+            margin: 0 auto;
+            width: 170px;
+            height: 145px;
+            overflow: hidden;
+        }
+        .product-desc {
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 100%;
+            height: 24px;
+            line-height: 24px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .product-title {
+            position: absolute;
+            left: 0;
+            top: 34px;
+            width: 100%;
+            height: 18px;
+            line-height: 18px;
+            font-size: 14px;
+            color: #666;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            transition: all .3s ease;
+        }
+        .product-badge {
+            position: absolute;
+            left: 0;
+            top: 62px;
+            transition: all .3s ease;
+            overflow: hidden;
+            span {
+                float: left;
+                margin-right: 5px;
+                padding: 3px 5px;
+                border: 1px dashed #f5252d;
+                font-size: 12px;
+                color: #f5252d;
+            }
+        }
+        .product-price {
+            position: absolute;
+            left: 0;
+            top: 96px;
+            transition: all .3s ease;
+        }
+        .present-price {
+            display: block;
+            color: #f5252d;
+            font-size: 16px;
+            line-height: 22px;
+        }
+        .original-price {
+            display: block;
+            line-height: 14px;
+            font-size: 12px;
+            color: #999;
+            text-decoration: line-through;
+        }
+        .product-btn {
+            position: absolute;
+            right: 0;
+            top: 108px;
+            width: 66px;
+            height: 24px;
+            background: #589930;
+            font-size: 14px;
+            color: #fff;
+            text-align: center;
+            line-height: 24px;
+            transition: all .3s ease;
+        }
+    }
+    .seckill-products-6 {
+        ul {
+            margin-right: -15px;
+        }
+        .product-list {
+            position: relative;
+            float: left;
+            margin-right: 15px;
+            margin-bottom: 10px;
+            width: 320px;
+            height: 400px;
+            background: #fff;
+            &:hover {
+                .product-title {
+                    height: 36px;
+                    white-space: normal;
+                }
+                .product-badge {
+                    top: 75px;
+                }
+                .product-price {
+                    top: 105px;
+                }
+                .product-btn {
+                    top: 105px;
+                }
+            }
+        }
+        .goods-link {
+            position: relative;
+            display: block;
+            margin: 0 auto;
+            width: 260px;
+            height: 260px;
+            overflow: hidden;
+            .thumb {
+                display: block;
+                margin: 20px auto;
+                max-width: 220px;
+                max-height: 220px;
+                width: auto;
+                height: 220px;
+            }
+        }
+        .goods-info {
+            position: relative;
+            margin: 0 auto;
+            width: 280px;
+            height: 140px;
+            overflow: hidden;
+        }
+        .product-desc {
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 100%;
+            height: 20px;
+            line-height: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .product-title {
+            position: absolute;
+            left: 0;
+            top: 30px;
+            width: 100%;
+            height: 18px;
+            line-height: 18px;
+            font-size: 14px;
+            color: #666;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            transition: all .3s ease;
+        }
+        .product-badge {
+            position: absolute;
+            left: 0;
+            top: 62px;
+            transition: all .3s ease;
+            overflow: hidden;
+            span {
+                float: left;
+                margin-right: 5px;
+                padding: 3px;
+                border: 1px dashed #f5252d;
+                font-size: 12px;
+                color: #f5252d;
+            }
+        }
+        .product-price {
+            position: absolute;
+            left: 0;
+            top: 97px;
+            height: 32px;
+            transition: all .3s ease;
+        }
+        .present-price {
+            margin-right: 5px;
+            float: left;
+            color: #f5252d;
+            font-size: 20px;
+            line-height: 32px;
+        }
+        .original-price {
+            float: left;
+            font-size: 14px;
+            color: #999;
+            text-decoration: line-through;
+            line-height: 38px;
+        }
+        .product-btn {
+            position: absolute;
+            right: 0;
+            top: 98px;
+            width: 66px;
+            height: 26px;
+            background: #589930;
+            font-size: 14px;
+            color: #fff;
+            text-align: center;
+            line-height: 26px;
+            transition: all .3s ease;
+        }
+    }
+    .seckill-products-7 {
+        ul {
+            width: 1000px;
+            margin-right: -10px;
+        }
+        .product-list {
+            position: relative;
+            float: left;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            width: 240px;
+            height: 390px;
+            background: #fff;
+            transition: all .3s ease;
+            &:hover {
+                box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.15);
+            }
+        }
+        .goods-link {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 240px;
+            overflow: hidden;
+            .thumb {
+                display: block;
+                margin: 10px auto;
+                max-width: 220px;
+                max-height: 220px;
+                width: auto;
+                height: 220px;
+            }
+        }
+        .goods-info {
+            position: relative;
+            margin: -2px auto 0;
+            width: 220px;
+            height: 152px;
+            overflow: hidden;
+        }
+        .product-desc {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 24px;
+            line-height: 24px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .product-title {
+            position: absolute;
+            left: 0;
+            top: 25px;
+            height: 36px;
+            line-height: 18px;
+            font-size: 14px;
+            color: #666;
+            overflow: hidden;
+        }
+        .product-badge {
+            position: absolute;
+            left: 0;
+            top: 70px;
+            overflow: hidden;
+            span {
+                float: left;
+                margin-right: 5px;
+                padding: 3px 5px;
+                border: 1px dashed #f5252d;
+                font-size: 12px;
+                color: #f5252d;
+            }
+        }
+        .product-price {
+            position: absolute;
+            left: 0;
+            top: 100px;
+        }
+        .present-price {
+            display: block;
+            color: #f5252d;
+            font-size: 20px;
+            line-height: 26px;
+        }
+        .original-price {
+            display: block;
+            font-size: 14px;
+            color: #999;
+            text-decoration: line-through;
+            line-height: 18px;
+        }
+        .product-btn {
+            position: absolute;
+            right: 0;
+            top: 106px;
+            width: 70px;
+            height: 34px;
+            background: #589930;
+            font-size: 14px;
+            color: #fff;
+            text-align: center;
+            line-height: 34px;
+        }
+    }
+    .seckill-products-8 {
+        ul {
+            margin-right: -10px;
+        }
+        .product-list {
+            position: relative;
+            float: left;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            width: 190px;
+            height: 335px;
+            background: #fff;
+            &:hover {
+                .product-title {
+                    height: 36px;
+                    white-space: normal;
+                }
+                .product-badge {
+                    top: 78px;
+                }
+                .product-price {
+                    top: 105px;
+                }
+                .product-btn {
+                    top: 116px;
+                }
+            }
+        }
+        .goods-link {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 190px;
+            overflow: hidden;
+            .thumb {
+                display: block;
+                margin: 15px auto;
+                max-width: 160px;
+                max-height: 160px;
+                width: auto;
+                height: 160px;
+            }
+        }
+        .goods-info {
+            position: relative;
+            margin: 0 auto;
+            width: 170px;
+            height: 145px;
+            overflow: hidden;
+        }
+        .product-desc {
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 100%;
+            height: 24px;
+            line-height: 24px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .product-title {
+            position: absolute;
+            left: 0;
+            top: 34px;
+            width: 100%;
+            height: 18px;
+            line-height: 18px;
+            font-size: 14px;
+            color: #666;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            transition: all .3s ease;
+        }
+        .product-badge {
+            position: absolute;
+            left: 0;
+            top: 62px;
+            transition: all .3s ease;
+            overflow: hidden;
+            span {
+                float: left;
+                margin-right: 5px;
+                padding: 3px 5px;
+                border: 1px dashed #f5252d;
+                font-size: 12px;
+                color: #f5252d;
+            }
+        }
+        .product-price {
+            position: absolute;
+            left: 0;
+            top: 96px;
+            transition: all .3s ease;
+        }
+        .present-price {
+            display: block;
+            color: #f5252d;
+            font-size: 16px;
+            line-height: 22px;
+        }
+        .original-price {
+            display: block;
+            line-height: 14px;
+            font-size: 12px;
+            color: #999;
+            text-decoration: line-through;
+        }
+        .product-btn {
+            position: absolute;
+            right: 0;
+            top: 108px;
+            width: 66px;
+            height: 24px;
+            background: #589930;
+            font-size: 14px;
+            color: #fff;
+            text-align: center;
+            line-height: 24px;
+            transition: all .3s ease;
+        }
+    }
+    .seckill-products-6, .seckill-products-7, .seckill-products-8 {
+        padding-bottom: 10px;
+    }
+    .swiper-button-prev, .swiper-button-next {
+        margin-top: -28px;
+        width: 56px;
+        height: 56px;
+        background: url(http://7xit7l.com1.z0.glb.clouddn.com/active/cms/img/left.png) no-repeat;
+        z-index: 2;
+    }
+    .swiper-button-next {
+        right: 10px;
+        background-image: url(http://7xit7l.com1.z0.glb.clouddn.com/active/cms/img/right.png);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

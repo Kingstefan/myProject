@@ -1,0 +1,1690 @@
+<!doctype>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>BA移动端模板页</title>
+    <link rel="stylesheet" href="css/ba-tpl-m.css">
+    <style>
+        .sellout::after {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            content: "已售罄";
+            margin-left: -.6rem;
+            margin-top: -.6rem;
+            width: 1.2rem;
+            height: 1.2rem;
+            background: rgba(0,0,0,.7);
+            font-size: .24rem;
+            color: #fff;
+            line-height: 1.2rem;
+            text-align: center;
+            border-radius: 50%;
+        }
+        .seckill-sellout::after {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            content: "已抢光";
+            margin-left: -.6rem;
+            margin-top: -.6rem;
+            width: 1.2rem;
+            height: 1.2rem;
+            background: rgba(0,0,0,.7);
+            font-size: .24rem;
+            color: #fff;
+            line-height: 1.2rem;
+            text-align: center;
+            border-radius: 50%;
+        }
+        .seckillover::after {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            content: "已结束";
+            margin-left: -.6rem;
+            margin-top: -.6rem;
+            width: 1.2rem;
+            height: 1.2rem;
+            background: rgba(0,0,0,.7);
+            font-size: .24rem;
+            color: #fff;
+            line-height: 1.2rem;
+            text-align: center;
+            border-radius: 50%;
+        }
+        html, body { padding: 0; margin: 0; }
+        * { -webkit-tap-highlight-color: transparent; outline: none; }
+        .seckill-module * { padding: 0; margin: 0; }
+        .clearfix:after { content: ""; display: block; clear: both; }
+        .clearfix { zoom: 1; }
+        ul, li { margin: 0; padding: 0; list-style: none; }
+        a { text-decoration: none; -webkit-tap-highlight-color: transparent; outline: none; }
+        img { border: none; border: 0; }
+
+    </style>
+    <script src="https://cdn.staticfile.org/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                isIOS = navigator.userAgent.match(/iphone|ipod|ipad/gi),
+                dpr = isIOS ? Math.min(win.devicePixelRatio, 3) : 1,
+                scale = 1 / dpr,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+
+            docEl.dataset.dpr = dpr;
+
+            var metaEl = doc.createElement('meta');
+            metaEl.name = 'viewport';
+            metaEl.content = 'initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale;
+            docEl.firstElementChild.appendChild(metaEl);
+
+            var recalc = function () {
+                var width = docEl.getBoundingClientRect().width;
+                if (width / dpr > 750) {
+                    width = 750 * dpr;
+                }
+                docEl.style.fontSize = 100 * (width / 750) + 'px';
+            };
+            recalc();
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+        })(document, window);
+    </script>
+</head>
+<body>
+<link rel="stylesheet" href="https://staticfile.azoyacdn.com/public/swiper.min.css">
+<script src="https://staticfile.azoyacdn.com/public/swiper.min.js"></script>
+<div class="seckill-module clearfix" data-products-type="6" data-seckill-time="2018-02-27 15:06/2018-02-27 15:07,2018-02-27 15:08/2018-02-27 15:09,2018-02-27 15:10/2018-02-27 15:11;2018-02-28 11:10/2018-02-28 11:15,2018-02-28 11:10/2018-02-28 11:15,2018-02-28 11:10/2018-02-28 11:15;2018-03-01 11:10/2018-03-01 11:15,2018-03-01 11:10/2018-03-01 11:15,2018-03-01 11:10/2018-03-01 11:15">
+    <div class="product-wrap clearfix">
+        <div class="img-title">
+            <img src="http://7xit7l.com1.z0.glb.clouddn.com/active/cms/img//m-title.jpg" alt="" class="img">
+        </div>
+        <div class="text-title">
+            超级秒杀标题文字32px
+        </div>
+        <div class="seckill-date">
+
+        </div>
+        <div class="seckill-countdown">
+            <ul>
+                <li class="countdown-item current">
+                    <span class="spieltag-text">第一场1</span>
+                    <span class="countdown">即将开抢</span>
+                </li>
+                <li class="countdown-item">
+                    <span class="spieltag-text">第二场1</span>
+                    <span class="countdown">即将开抢</span>
+                </li>
+                <li class="countdown-item">
+                    <span class="spieltag-text">第三场1</span>
+                    <span class="countdown">即将开抢</span>
+                </li>
+            </ul>
+        </div>
+        <div class="seckill-countdown">
+            <ul>
+                <li class="countdown-item current">
+                    <span class="spieltag-text">第一场2</span>
+                    <span class="countdown">即将开抢</span>
+                </li>
+                <li class="countdown-item">
+                    <span class="spieltag-text">第二场2</span>
+                    <span class="countdown">即将开抢</span>
+                </li>
+                <li class="countdown-item">
+                    <span class="spieltag-text">第三场2</span>
+                    <span class="countdown">即将开抢</span>
+                </li>
+            </ul>
+        </div>
+        <div class="seckill-countdown">
+            <ul>
+                <li class="countdown-item current">
+                    <span class="spieltag-text">第一场3</span>
+                    <span class="countdown">即将开抢</span>
+                </li>
+                <li class="countdown-item">
+                    <span class="spieltag-text">第二场3</span>
+                    <span class="countdown">即将开抢</span>
+                </li>
+                <li class="countdown-item">
+                    <span class="spieltag-text">第三场3</span>
+                    <span class="countdown">即将开抢</span>
+                </li>
+            </ul>
+        </div>
+        <div class="seckill-countdown">
+            <ul>
+                <li class="countdown-item current">
+                    <span class="spieltag-text">第一场4</span>
+                    <span class="countdown">即将开抢</span>
+                </li>
+                <li class="countdown-item">
+                    <span class="spieltag-text">第二场4</span>
+                    <span class="countdown">即将开抢</span>
+                </li>
+                <li class="countdown-item">
+                    <span class="spieltag-text">第三场4</span>
+                    <span class="countdown">即将开抢</span>
+                </li>
+            </ul>
+        </div>
+        <div data-type="1" class="seckill-products-1 seckill-products">
+            <ul>
+                <li class="product-list">
+                    <a href="" target="_blank" class="goods-link ">
+                        <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                    </a>
+                    <div class="goods-info clearfix">
+                        <div class="product-desc">促进宝宝消化排便</div>
+                        <div class="product-title"> 爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                        <div class="product-badge">
+                            <span>特价</span>
+                            <span>全场包邮</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                            <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                        </div>
+                        <a href="" target="_blank" class="product-btn"></a>
+                    </div>
+                    <div class="discount">75折</div>
+                </li>
+                <li class="product-list">
+                    <a href="" target="_blank" class="goods-link">
+                        <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                    </a>
+                    <div class="goods-info clearfix">
+                        <div class="product-desc">促进宝宝消化排便</div>
+                        <div class="product-title">爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                        <div class="product-badge">
+                            <span>特价</span>
+                            <span>全场包邮</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                            <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                        </div>
+                        <a href="" target="_blank" class="product-btn"></a>
+                    </div>
+                    <div class="discount">75折</div>
+                </li>
+            </ul>
+        </div>
+        <div data-type="2" class="seckill-products-2 seckill-products">
+            <ul>
+                <li class="product-list">
+                    <a href="" target="_blank" class="goods-link ">
+                        <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                    </a>
+                    <div class="goods-info clearfix">
+                        <div class="product-desc">1111促进宝宝消化排便</div>
+                        <div class="product-title"> 爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                        <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                            <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                        </div>
+                        <a href="" target="_blank" class="product-btn">即将开始</a>
+                    </div>
+                    <div class="discount">75折</div>
+                    <div class="product-badge">
+                        <span>特价</span>
+                        <span>全场包邮</span>
+                    </div>
+                </li>
+                <li class="product-list">
+                    <a href="" target="_blank" class="goods-link">
+                        <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                    </a>
+                    <div class="goods-info clearfix">
+                        <div class="product-desc">1111促进宝宝消化排便</div>
+                        <div class="product-title">爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                        <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                            <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                        </div>
+                        <a href="" target="_blank" class="product-btn">即将开始</a>
+                    </div>
+                    <div class="discount">75折</div>
+                    <div class="product-badge">
+                        <span>特价</span>
+                        <span>全场包邮</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div data-type="2" class="seckill-products-2 seckill-products">
+            <ul>
+                <li class="product-list">
+                    <a href="" target="_blank" class="goods-link ">
+                        <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                    </a>
+                    <div class="goods-info clearfix">
+                        <div class="product-desc">2222促进宝宝消化排便</div>
+                        <div class="product-title"> 爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                        <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                            <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                        </div>
+                        <a href="" target="_blank" class="product-btn">即将开始</a>
+                    </div>
+                    <div class="discount">75折</div>
+                    <div class="product-badge">
+                        <span>特价</span>
+                        <span>全场包邮</span>
+                    </div>
+                </li>
+                <li class="product-list">
+                    <a href="" target="_blank" class="goods-link">
+                        <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                    </a>
+                    <div class="goods-info clearfix">
+                        <div class="product-desc">2222促进宝宝消化排便</div>
+                        <div class="product-title">爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                        <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                            <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                        </div>
+                        <a href="" target="_blank" class="product-btn">即将开始</a>
+                    </div>
+                    <div class="discount">75折</div>
+                    <div class="product-badge">
+                        <span>特价</span>
+                        <span>全场包邮</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div data-type="2" class="seckill-products-2 seckill-products">
+            <ul>
+                <li class="product-list">
+                    <a href="" target="_blank" class="goods-link ">
+                        <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                    </a>
+                    <div class="goods-info clearfix">
+                        <div class="product-desc">3333促进宝宝消化排便</div>
+                        <div class="product-title"> 爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                        <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                            <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                        </div>
+                        <a href="" target="_blank" class="product-btn">即将开始</a>
+                    </div>
+                    <div class="discount">75折</div>
+                    <div class="product-badge">
+                        <span>特价</span>
+                        <span>全场包邮</span>
+                    </div>
+                </li>
+                <li class="product-list">
+                    <a href="" target="_blank" class="goods-link">
+                        <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                    </a>
+                    <div class="goods-info clearfix">
+                        <div class="product-desc">3333促进宝宝消化排便</div>
+                        <div class="product-title">爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                        <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                            <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                        </div>
+                        <a href="" target="_blank" class="product-btn">即将开始</a>
+                    </div>
+                    <div class="discount">75折</div>
+                    <div class="product-badge">
+                        <span>特价</span>
+                        <span>全场包邮</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div data-type="2" class="seckill-products-2 seckill-products">
+            <ul>
+                <li class="product-list">
+                    <a href="" target="_blank" class="goods-link ">
+                        <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                    </a>
+                    <div class="goods-info clearfix">
+                        <div class="product-desc">4444促进宝宝消化排便</div>
+                        <div class="product-title"> 爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                        <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                            <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                        </div>
+                        <a href="" target="_blank" class="product-btn">即将开始</a>
+                    </div>
+                    <div class="discount">75折</div>
+                    <div class="product-badge">
+                        <span>特价</span>
+                        <span>全场包邮</span>
+                    </div>
+                </li>
+                <li class="product-list">
+                    <a href="" target="_blank" class="goods-link">
+                        <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                    </a>
+                    <div class="goods-info clearfix">
+                        <div class="product-desc">4444促进宝宝消化排便</div>
+                        <div class="product-title">爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                        <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                            <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                        </div>
+                        <a href="" target="_blank" class="product-btn">即将开始</a>
+                    </div>
+                    <div class="discount">75折</div>
+                    <div class="product-badge">
+                        <span>特价</span>
+                        <span>全场包邮</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div data-type="2" class="seckill-products-2 seckill-products">
+            <ul>
+                <li class="product-list">
+                    <a href="" target="_blank" class="goods-link ">
+                        <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                    </a>
+                    <div class="goods-info clearfix">
+                        <div class="product-desc">5555促进宝宝消化排便</div>
+                        <div class="product-title"> 爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                        <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                            <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                        </div>
+                        <a href="" target="_blank" class="product-btn">即将开始</a>
+                    </div>
+                    <div class="discount">75折</div>
+                    <div class="product-badge">
+                        <span>特价</span>
+                        <span>全场包邮</span>
+                    </div>
+                </li>
+                <li class="product-list">
+                    <a href="" target="_blank" class="goods-link">
+                        <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                    </a>
+                    <div class="goods-info clearfix">
+                        <div class="product-desc">5555促进宝宝消化排便</div>
+                        <div class="product-title">爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                        <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                            <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                        </div>
+                        <a href="" target="_blank" class="product-btn">即将开始</a>
+                    </div>
+                    <div class="discount">75折</div>
+                    <div class="product-badge">
+                        <span>特价</span>
+                        <span>全场包邮</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div data-type="2" class="seckill-products-2 seckill-products">
+            <ul>
+                <li class="product-list">
+                    <a href="" target="_blank" class="goods-link ">
+                        <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                    </a>
+                    <div class="goods-info clearfix">
+                        <div class="product-desc">6666促进宝宝消化排便</div>
+                        <div class="product-title"> 爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                        <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                            <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                        </div>
+                        <a href="" target="_blank" class="product-btn">即将开始</a>
+                    </div>
+                    <div class="discount">75折</div>
+                    <div class="product-badge">
+                        <span>特价</span>
+                        <span>全场包邮</span>
+                    </div>
+                </li>
+                <li class="product-list">
+                    <a href="" target="_blank" class="goods-link">
+                        <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                    </a>
+                    <div class="goods-info clearfix">
+                        <div class="product-desc">6666促进宝宝消化排便</div>
+                        <div class="product-title">爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                        <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                            <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                        </div>
+                        <a href="" target="_blank" class="product-btn">即将开始</a>
+                    </div>
+                    <div class="discount">75折</div>
+                    <div class="product-badge">
+                        <span>特价</span>
+                        <span>全场包邮</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div data-type="2" class="seckill-products-2 seckill-products">
+            <ul>
+                <li class="product-list">
+                    <a href="" target="_blank" class="goods-link ">
+                        <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                    </a>
+                    <div class="goods-info clearfix">
+                        <div class="product-desc">7777促进宝宝消化排便</div>
+                        <div class="product-title"> 爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                        <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                            <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                        </div>
+                        <a href="" target="_blank" class="product-btn">即将开始</a>
+                    </div>
+                    <div class="discount">75折</div>
+                    <div class="product-badge">
+                        <span>特价</span>
+                        <span>全场包邮</span>
+                    </div>
+                </li>
+                <li class="product-list">
+                    <a href="" target="_blank" class="goods-link">
+                        <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                    </a>
+                    <div class="goods-info clearfix">
+                        <div class="product-desc">7777促进宝宝消化排便</div>
+                        <div class="product-title">爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                        <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                            <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                        </div>
+                        <a href="" target="_blank" class="product-btn">即将开始</a>
+                    </div>
+                    <div class="discount">75折</div>
+                    <div class="product-badge">
+                        <span>特价</span>
+                        <span>全场包邮</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div data-type="2" class="seckill-products-2 seckill-products">
+            <ul>
+                <li class="product-list">
+                    <a href="" target="_blank" class="goods-link ">
+                        <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                    </a>
+                    <div class="goods-info clearfix">
+                        <div class="product-desc">888促进宝宝消化排便</div>
+                        <div class="product-title"> 爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                        <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                            <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                        </div>
+                        <a href="" target="_blank" class="product-btn">即将开始</a>
+                    </div>
+                    <div class="discount">75折</div>
+                    <div class="product-badge">
+                        <span>特价</span>
+                        <span>全场包邮</span>
+                    </div>
+                </li>
+                <li class="product-list">
+                    <a href="" target="_blank" class="goods-link">
+                        <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                    </a>
+                    <div class="goods-info clearfix">
+                        <div class="product-desc">888促进宝宝消化排便</div>
+                        <div class="product-title">爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                        <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                            <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                        </div>
+                        <a href="" target="_blank" class="product-btn">即将开始</a>
+                    </div>
+                    <div class="discount">75折</div>
+                    <div class="product-badge">
+                        <span>特价</span>
+                        <span>全场包邮</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div data-type="2" class="seckill-products-2 seckill-products">
+            <ul>
+                <li class="product-list">
+                    <a href="" target="_blank" class="goods-link ">
+                        <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                    </a>
+                    <div class="goods-info clearfix">
+                        <div class="product-desc">9999促进宝宝消化排便</div>
+                        <div class="product-title"> 爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                        <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                            <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                        </div>
+                        <a href="" target="_blank" class="product-btn">即将开始</a>
+                    </div>
+                    <div class="discount">75折</div>
+                    <div class="product-badge">
+                        <span>特价</span>
+                        <span>全场包邮</span>
+                    </div>
+                </li>
+                <li class="product-list">
+                    <a href="" target="_blank" class="goods-link">
+                        <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                    </a>
+                    <div class="goods-info clearfix">
+                        <div class="product-desc">9999促进宝宝消化排便</div>
+                        <div class="product-title">爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                        <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                            <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                        </div>
+                        <a href="" target="_blank" class="product-btn">即将开始</a>
+                    </div>
+                    <div class="discount">75折</div>
+                    <div class="product-badge">
+                        <span>特价</span>
+                        <span>全场包邮</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+
+        <div data-type="3" class="seckill-products-3 seckill-products">
+            <ul>
+                <li class="product-list">
+                    <a href="" target="_blank" class="goods-link ">
+                        <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                    </a>
+                    <div class="goods-info clearfix">
+                        <div class="product-desc">促进宝宝消化排便</div>
+                        <div class="product-title"> 爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                        <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">$</span>177.9</span>
+                            <span class="original-price">
+                                <span class="symbol">$</span>277.9</span>
+                        </div>
+                        <a href="" target="_blank" class="product-btn">即将开始</a>
+                    </div>
+                    <div class="discount">75折</div>
+                    <div class="product-badge">
+                        <span>特价</span>
+                        <span>全场包邮</span>
+                    </div>
+                </li>
+                <li class="product-list">
+                    <a href="" target="_blank" class="goods-link">
+                        <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                    </a>
+                    <div class="goods-info clearfix">
+                        <div class="product-desc">促进宝宝消化排便</div>
+                        <div class="product-title">爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                        <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">$</span>177.9</span>
+                            <span class="original-price">
+                                <span class="symbol">$</span>277.9</span>
+                        </div>
+                        <a href="" target="_blank" class="product-btn">即将开始</a>
+                    </div>
+                    <div class="discount">75折</div>
+                    <div class="product-badge">
+                        <span>特价</span>
+                        <span>全场包邮</span>
+                    </div>
+                </li>
+                <li class="product-list">
+                    <a href="" target="_blank" class="goods-link">
+                        <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                    </a>
+                    <div class="goods-info clearfix">
+                        <div class="product-desc">促进宝宝消化排便</div>
+                        <div class="product-title">爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                        <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">$</span>177.9</span>
+                            <span class="original-price">
+                                <span class="symbol">$</span>277.9</span>
+                        </div>
+                        <a href="" target="_blank" class="product-btn">即将开始</a>
+                    </div>
+                    <div class="discount">75折</div>
+                    <div class="product-badge">
+                        <span>特价</span>
+                        <span>全场包邮</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div data-type="4" class="seckill-products-4 seckill-products">
+            <ul>
+                <li class="product-list">
+                    <a href="" target="_blank" class="goods-link ">
+                        <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                    </a>
+                    <div class="goods-info clearfix">
+                        <div class="product-desc">促进宝宝消化排便</div>
+                        <div class="product-title"> 爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                        <div class="product-badge">
+                            <span>特价</span>
+                            <span>全场包邮</span>
+                        </div>
+                        <div class="product-price">
+                                <span class="present-price">
+                                <span class="symbol">$</span>177.9</span>
+                            <span class="original-price">
+                                <span class="symbol">$</span>277.9</span>
+                        </div>
+                        <a href="" target="_blank" class="product-btn"></a>
+                    </div>
+                    <div class="discount">75折</div>
+                </li>
+                <li class="product-list">
+                    <a href="" target="_blank" class="goods-link">
+                        <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                    </a>
+                    <div class="goods-info clearfix">
+                        <div class="product-desc">促进宝宝消化排便</div>
+                        <div class="product-title">爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                        <div class="product-badge">
+                            <span>特价</span>
+                            <span>全场包邮</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">$</span>177.9</span>
+                            <span class="original-price">
+                                <span class="symbol">$</span>277.9</span>
+                        </div>
+                        <a href="" target="_blank" class="product-btn"></a>
+                    </div>
+                    <div class="discount">75折</div>
+                </li>
+                <li class="product-list">
+                    <a href="" target="_blank" class="goods-link">
+                        <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                    </a>
+                    <div class="goods-info clearfix">
+                        <div class="product-desc">促进宝宝消化排便</div>
+                        <div class="product-title">爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                        <div class="product-badge">
+                            <span>特价</span>
+                            <span>全场包邮</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">$</span>177.9</span>
+                            <span class="original-price">
+                                <span class="symbol">$</span>277.9</span>
+                        </div>
+                        <a href="" target="_blank" class="product-btn"></a>
+                    </div>
+                    <div class="discount">75折</div>
+                </li>
+            </ul>
+        </div>
+        <div data-type="5" class="seckill-products-5 seckill-products">
+            <div class="swiper-container">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide product-list">
+                        <a href="" target="_blank" class="goods-link ">
+                            <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                        </a>
+                        <div class="goods-info clearfix">
+                            <div class="product-desc">1111促进宝宝消化排便</div>
+                            <div class="product-title"> 爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                            <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                                <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                            </div>
+                            <a href="" target="_blank" class="product-btn">即将开始</a>
+                        </div>
+                        <div class="discount">75折</div>
+                        <div class="product-badge">
+                            <span>特价</span>
+                            <span>全场包邮</span>
+                        </div>
+                    </li>
+                    <li class="swiper-slide product-list">
+                        <a href="" target="_blank" class="goods-link">
+                            <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                        </a>
+                        <div class="goods-info clearfix">
+                            <div class="product-desc">1111促进宝宝消化排便</div>
+                            <div class="product-title">爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                            <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                                <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                            </div>
+                            <a href="" target="_blank" class="product-btn">即将开始</a>
+                        </div>
+                        <div class="discount">75折</div>
+                        <div class="product-badge">
+                            <span>特价</span>
+                            <span>全场包邮</span>
+                        </div>
+                    </li>
+                    <li class="swiper-slide product-list">
+                        <a href="" target="_blank" class="goods-link">
+                            <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                        </a>
+                        <div class="goods-info clearfix">
+                            <div class="product-desc">1111促进宝宝消化排便</div>
+                            <div class="product-title">爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                            <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                                <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                            </div>
+                            <a href="" target="_blank" class="product-btn">即将开始</a>
+                        </div>
+                        <div class="discount">75折</div>
+                        <div class="product-badge">
+                            <span>特价</span>
+                            <span>全场包邮</span>
+                        </div>
+                    </li>
+                    <li class="swiper-slide product-list">
+                        <a href="" target="_blank" class="goods-link">
+                            <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                        </a>
+                        <div class="goods-info clearfix">
+                            <div class="product-desc">1111促进宝宝消化排便</div>
+                            <div class="product-title">爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                            <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                                <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                            </div>
+                            <a href="" target="_blank" class="product-btn">即将开始</a>
+                        </div>
+                        <div class="discount">75折</div>
+                        <div class="product-badge">
+                            <span>特价</span>
+                            <span>全场包邮</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div data-type="5" class="seckill-products-5 seckill-products">
+            <div class="swiper-container">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide product-list">
+                        <a href="" target="_blank" class="goods-link ">
+                            <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                        </a>
+                        <div class="goods-info clearfix">
+                            <div class="product-desc">22222促进宝宝消化排便</div>
+                            <div class="product-title"> 爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                            <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                                <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                            </div>
+                            <a href="" target="_blank" class="product-btn">即将开始</a>
+                        </div>
+                        <div class="discount">75折</div>
+                        <div class="product-badge">
+                            <span>特价</span>
+                            <span>全场包邮</span>
+                        </div>
+                    </li>
+                    <li class="swiper-slide product-list">
+                        <a href="" target="_blank" class="goods-link">
+                            <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                        </a>
+                        <div class="goods-info clearfix">
+                            <div class="product-desc">22222促进宝宝消化排便</div>
+                            <div class="product-title">爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                            <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                                <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                            </div>
+                            <a href="" target="_blank" class="product-btn">即将开始</a>
+                        </div>
+                        <div class="discount">75折</div>
+                        <div class="product-badge">
+                            <span>特价</span>
+                            <span>全场包邮</span>
+                        </div>
+                    </li>
+                    <li class="swiper-slide product-list">
+                        <a href="" target="_blank" class="goods-link">
+                            <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                        </a>
+                        <div class="goods-info clearfix">
+                            <div class="product-desc">22222促进宝宝消化排便</div>
+                            <div class="product-title">爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                            <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                                <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                            </div>
+                            <a href="" target="_blank" class="product-btn">即将开始</a>
+                        </div>
+                        <div class="discount">75折</div>
+                        <div class="product-badge">
+                            <span>特价</span>
+                            <span>全场包邮</span>
+                        </div>
+                    </li>
+                    <li class="swiper-slide product-list">
+                        <a href="" target="_blank" class="goods-link">
+                            <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                        </a>
+                        <div class="goods-info clearfix">
+                            <div class="product-desc">22222促进宝宝消化排便</div>
+                            <div class="product-title">爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                            <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                                <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                            </div>
+                            <a href="" target="_blank" class="product-btn">即将开始</a>
+                        </div>
+                        <div class="discount">75折</div>
+                        <div class="product-badge">
+                            <span>特价</span>
+                            <span>全场包邮</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div data-type="5" class="seckill-products-5 seckill-products">
+            <div class="swiper-container">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide product-list">
+                        <a href="" target="_blank" class="goods-link ">
+                            <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                        </a>
+                        <div class="goods-info clearfix">
+                            <div class="product-desc">3333促进宝宝消化排便</div>
+                            <div class="product-title"> 爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                            <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                                <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                            </div>
+                            <a href="" target="_blank" class="product-btn">即将开始</a>
+                        </div>
+                        <div class="discount">75折</div>
+                        <div class="product-badge">
+                            <span>特价</span>
+                            <span>全场包邮</span>
+                        </div>
+                    </li>
+                    <li class="swiper-slide product-list">
+                        <a href="" target="_blank" class="goods-link">
+                            <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                        </a>
+                        <div class="goods-info clearfix">
+                            <div class="product-desc">3333促进宝宝消化排便</div>
+                            <div class="product-title">爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                            <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                                <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                            </div>
+                            <a href="" target="_blank" class="product-btn">即将开始</a>
+                        </div>
+                        <div class="discount">75折</div>
+                        <div class="product-badge">
+                            <span>特价</span>
+                            <span>全场包邮</span>
+                        </div>
+                    </li>
+                    <li class="swiper-slide product-list">
+                        <a href="" target="_blank" class="goods-link">
+                            <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                        </a>
+                        <div class="goods-info clearfix">
+                            <div class="product-desc">3333促进宝宝消化排便</div>
+                            <div class="product-title">爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                            <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                                <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                            </div>
+                            <a href="" target="_blank" class="product-btn">即将开始</a>
+                        </div>
+                        <div class="discount">75折</div>
+                        <div class="product-badge">
+                            <span>特价</span>
+                            <span>全场包邮</span>
+                        </div>
+                    </li>
+                    <li class="swiper-slide product-list">
+                        <a href="" target="_blank" class="goods-link">
+                            <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                        </a>
+                        <div class="goods-info clearfix">
+                            <div class="product-desc">3333促进宝宝消化排便</div>
+                            <div class="product-title">爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                            <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                                <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                            </div>
+                            <a href="" target="_blank" class="product-btn">即将开始</a>
+                        </div>
+                        <div class="discount">75折</div>
+                        <div class="product-badge">
+                            <span>特价</span>
+                            <span>全场包邮</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div data-type="5" class="seckill-products-5 seckill-products">
+            <div class="swiper-container">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide product-list">
+                        <a href="" target="_blank" class="goods-link ">
+                            <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                        </a>
+                        <div class="goods-info clearfix">
+                            <div class="product-desc">4444促进宝宝消化排便</div>
+                            <div class="product-title"> 爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                            <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                                <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                            </div>
+                            <a href="" target="_blank" class="product-btn">即将开始</a>
+                        </div>
+                        <div class="discount">75折</div>
+                        <div class="product-badge">
+                            <span>特价</span>
+                            <span>全场包邮</span>
+                        </div>
+                    </li>
+                    <li class="swiper-slide product-list">
+                        <a href="" target="_blank" class="goods-link">
+                            <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                        </a>
+                        <div class="goods-info clearfix">
+                            <div class="product-desc">4444促进宝宝消化排便</div>
+                            <div class="product-title">爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                            <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                                <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                            </div>
+                            <a href="" target="_blank" class="product-btn">即将开始</a>
+                        </div>
+                        <div class="discount">75折</div>
+                        <div class="product-badge">
+                            <span>特价</span>
+                            <span>全场包邮</span>
+                        </div>
+                    </li>
+                    <li class="swiper-slide product-list">
+                        <a href="" target="_blank" class="goods-link">
+                            <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                        </a>
+                        <div class="goods-info clearfix">
+                            <div class="product-desc">4444促进宝宝消化排便</div>
+                            <div class="product-title">爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                            <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                                <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                            </div>
+                            <a href="" target="_blank" class="product-btn">即将开始</a>
+                        </div>
+                        <div class="discount">75折</div>
+                        <div class="product-badge">
+                            <span>特价</span>
+                            <span>全场包邮</span>
+                        </div>
+                    </li>
+                    <li class="swiper-slide product-list">
+                        <a href="" target="_blank" class="goods-link">
+                            <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                        </a>
+                        <div class="goods-info clearfix">
+                            <div class="product-desc">4444促进宝宝消化排便</div>
+                            <div class="product-title">爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                            <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                                <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                            </div>
+                            <a href="" target="_blank" class="product-btn">即将开始</a>
+                        </div>
+                        <div class="discount">75折</div>
+                        <div class="product-badge">
+                            <span>特价</span>
+                            <span>全场包邮</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div data-type="5" class="seckill-products-5 seckill-products">
+            <div class="swiper-container">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide product-list">
+                        <a href="" target="_blank" class="goods-link ">
+                            <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                        </a>
+                        <div class="goods-info clearfix">
+                            <div class="product-desc">5555促进宝宝消化排便</div>
+                            <div class="product-title"> 爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                            <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                                <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                            </div>
+                            <a href="" target="_blank" class="product-btn">即将开始</a>
+                        </div>
+                        <div class="discount">75折</div>
+                        <div class="product-badge">
+                            <span>特价</span>
+                            <span>全场包邮</span>
+                        </div>
+                    </li>
+                    <li class="swiper-slide product-list">
+                        <a href="" target="_blank" class="goods-link">
+                            <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                        </a>
+                        <div class="goods-info clearfix">
+                            <div class="product-desc">5555促进宝宝消化排便</div>
+                            <div class="product-title">爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                            <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                                <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                            </div>
+                            <a href="" target="_blank" class="product-btn">即将开始</a>
+                        </div>
+                        <div class="discount">75折</div>
+                        <div class="product-badge">
+                            <span>特价</span>
+                            <span>全场包邮</span>
+                        </div>
+                    </li>
+                    <li class="swiper-slide product-list">
+                        <a href="" target="_blank" class="goods-link">
+                            <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                        </a>
+                        <div class="goods-info clearfix">
+                            <div class="product-desc">5555促进宝宝消化排便</div>
+                            <div class="product-title">爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                            <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                                <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                            </div>
+                            <a href="" target="_blank" class="product-btn">即将开始</a>
+                        </div>
+                        <div class="discount">75折</div>
+                        <div class="product-badge">
+                            <span>特价</span>
+                            <span>全场包邮</span>
+                        </div>
+                    </li>
+                    <li class="swiper-slide product-list">
+                        <a href="" target="_blank" class="goods-link">
+                            <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                        </a>
+                        <div class="goods-info clearfix">
+                            <div class="product-desc">5555促进宝宝消化排便</div>
+                            <div class="product-title">爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                            <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                                <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                            </div>
+                            <a href="" target="_blank" class="product-btn">即将开始</a>
+                        </div>
+                        <div class="discount">75折</div>
+                        <div class="product-badge">
+                            <span>特价</span>
+                            <span>全场包邮</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div data-type="5" class="seckill-products-5 seckill-products">
+            <div class="swiper-container">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide product-list">
+                        <a href="" target="_blank" class="goods-link ">
+                            <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                        </a>
+                        <div class="goods-info clearfix">
+                            <div class="product-desc">6666促进宝宝消化排便</div>
+                            <div class="product-title"> 爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                            <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                                <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                            </div>
+                            <a href="" target="_blank" class="product-btn">即将开始</a>
+                        </div>
+                        <div class="discount">75折</div>
+                        <div class="product-badge">
+                            <span>特价</span>
+                            <span>全场包邮</span>
+                        </div>
+                    </li>
+                    <li class="swiper-slide product-list">
+                        <a href="" target="_blank" class="goods-link">
+                            <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                        </a>
+                        <div class="goods-info clearfix">
+                            <div class="product-desc">6666促进宝宝消化排便</div>
+                            <div class="product-title">爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                            <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                                <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                            </div>
+                            <a href="" target="_blank" class="product-btn">即将开始</a>
+                        </div>
+                        <div class="discount">75折</div>
+                        <div class="product-badge">
+                            <span>特价</span>
+                            <span>全场包邮</span>
+                        </div>
+                    </li>
+                    <li class="swiper-slide product-list">
+                        <a href="" target="_blank" class="goods-link">
+                            <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                        </a>
+                        <div class="goods-info clearfix">
+                            <div class="product-desc">6666促进宝宝消化排便</div>
+                            <div class="product-title">爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                            <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                                <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                            </div>
+                            <a href="" target="_blank" class="product-btn">即将开始</a>
+                        </div>
+                        <div class="discount">75折</div>
+                        <div class="product-badge">
+                            <span>特价</span>
+                            <span>全场包邮</span>
+                        </div>
+                    </li>
+                    <li class="swiper-slide product-list">
+                        <a href="" target="_blank" class="goods-link">
+                            <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                        </a>
+                        <div class="goods-info clearfix">
+                            <div class="product-desc">6666促进宝宝消化排便</div>
+                            <div class="product-title">爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                            <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                                <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                            </div>
+                            <a href="" target="_blank" class="product-btn">即将开始</a>
+                        </div>
+                        <div class="discount">75折</div>
+                        <div class="product-badge">
+                            <span>特价</span>
+                            <span>全场包邮</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div data-type="5" class="seckill-products-5 seckill-products">
+            <div class="swiper-container">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide product-list">
+                        <a href="" target="_blank" class="goods-link ">
+                            <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                        </a>
+                        <div class="goods-info clearfix">
+                            <div class="product-desc">7777促进宝宝消化排便</div>
+                            <div class="product-title"> 爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                            <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                                <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                            </div>
+                            <a href="" target="_blank" class="product-btn">即将开始</a>
+                        </div>
+                        <div class="discount">75折</div>
+                        <div class="product-badge">
+                            <span>特价</span>
+                            <span>全场包邮</span>
+                        </div>
+                    </li>
+                    <li class="swiper-slide product-list">
+                        <a href="" target="_blank" class="goods-link">
+                            <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                        </a>
+                        <div class="goods-info clearfix">
+                            <div class="product-desc">7777促进宝宝消化排便</div>
+                            <div class="product-title">爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                            <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                                <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                            </div>
+                            <a href="" target="_blank" class="product-btn">即将开始</a>
+                        </div>
+                        <div class="discount">75折</div>
+                        <div class="product-badge">
+                            <span>特价</span>
+                            <span>全场包邮</span>
+                        </div>
+                    </li>
+                    <li class="swiper-slide product-list">
+                        <a href="" target="_blank" class="goods-link">
+                            <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                        </a>
+                        <div class="goods-info clearfix">
+                            <div class="product-desc">7777促进宝宝消化排便</div>
+                            <div class="product-title">爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                            <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                                <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                            </div>
+                            <a href="" target="_blank" class="product-btn">即将开始</a>
+                        </div>
+                        <div class="discount">75折</div>
+                        <div class="product-badge">
+                            <span>特价</span>
+                            <span>全场包邮</span>
+                        </div>
+                    </li>
+                    <li class="swiper-slide product-list">
+                        <a href="" target="_blank" class="goods-link">
+                            <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                        </a>
+                        <div class="goods-info clearfix">
+                            <div class="product-desc">7777促进宝宝消化排便</div>
+                            <div class="product-title">爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                            <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                                <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                            </div>
+                            <a href="" target="_blank" class="product-btn">即将开始</a>
+                        </div>
+                        <div class="discount">75折</div>
+                        <div class="product-badge">
+                            <span>特价</span>
+                            <span>全场包邮</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div data-type="5" class="seckill-products-5 seckill-products">
+            <div class="swiper-container">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide product-list">
+                        <a href="" target="_blank" class="goods-link ">
+                            <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                        </a>
+                        <div class="goods-info clearfix">
+                            <div class="product-desc">8888促进宝宝消化排便</div>
+                            <div class="product-title"> 爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                            <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                                <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                            </div>
+                            <a href="" target="_blank" class="product-btn">即将开始</a>
+                        </div>
+                        <div class="discount">75折</div>
+                        <div class="product-badge">
+                            <span>特价</span>
+                            <span>全场包邮</span>
+                        </div>
+                    </li>
+                    <li class="swiper-slide product-list">
+                        <a href="" target="_blank" class="goods-link">
+                            <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                        </a>
+                        <div class="goods-info clearfix">
+                            <div class="product-desc">8888促进宝宝消化排便</div>
+                            <div class="product-title">爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                            <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                                <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                            </div>
+                            <a href="" target="_blank" class="product-btn">即将开始</a>
+                        </div>
+                        <div class="discount">75折</div>
+                        <div class="product-badge">
+                            <span>特价</span>
+                            <span>全场包邮</span>
+                        </div>
+                    </li>
+                    <li class="swiper-slide product-list">
+                        <a href="" target="_blank" class="goods-link">
+                            <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                        </a>
+                        <div class="goods-info clearfix">
+                            <div class="product-desc">8888促进宝宝消化排便</div>
+                            <div class="product-title">爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                            <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                                <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                            </div>
+                            <a href="" target="_blank" class="product-btn">即将开始</a>
+                        </div>
+                        <div class="discount">75折</div>
+                        <div class="product-badge">
+                            <span>特价</span>
+                            <span>全场包邮</span>
+                        </div>
+                    </li>
+                    <li class="swiper-slide product-list">
+                        <a href="" target="_blank" class="goods-link">
+                            <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                        </a>
+                        <div class="goods-info clearfix">
+                            <div class="product-desc">8888促进宝宝消化排便</div>
+                            <div class="product-title">爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                            <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                                <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                            </div>
+                            <a href="" target="_blank" class="product-btn">即将开始</a>
+                        </div>
+                        <div class="discount">75折</div>
+                        <div class="product-badge">
+                            <span>特价</span>
+                            <span>全场包邮</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div data-type="5" class="seckill-products-5 seckill-products">
+            <div class="swiper-container">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide product-list">
+                        <a href="" target="_blank" class="goods-link ">
+                            <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                        </a>
+                        <div class="goods-info clearfix">
+                            <div class="product-desc">9999促进宝宝消化排便</div>
+                            <div class="product-title"> 爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                            <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                                <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                            </div>
+                            <a href="" target="_blank" class="product-btn">即将开始</a>
+                        </div>
+                        <div class="discount">75折</div>
+                        <div class="product-badge">
+                            <span>特价</span>
+                            <span>全场包邮</span>
+                        </div>
+                    </li>
+                    <li class="swiper-slide product-list">
+                        <a href="" target="_blank" class="goods-link">
+                            <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                        </a>
+                        <div class="goods-info clearfix">
+                            <div class="product-desc">9999促进宝宝消化排便</div>
+                            <div class="product-title">爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                            <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                                <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                            </div>
+                            <a href="" target="_blank" class="product-btn">即将开始</a>
+                        </div>
+                        <div class="discount">75折</div>
+                        <div class="product-badge">
+                            <span>特价</span>
+                            <span>全场包邮</span>
+                        </div>
+                    </li>
+                    <li class="swiper-slide product-list">
+                        <a href="" target="_blank" class="goods-link">
+                            <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                        </a>
+                        <div class="goods-info clearfix">
+                            <div class="product-desc">9999促进宝宝消化排便</div>
+                            <div class="product-title">爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                            <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                                <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                            </div>
+                            <a href="" target="_blank" class="product-btn">即将开始</a>
+                        </div>
+                        <div class="discount">75折</div>
+                        <div class="product-badge">
+                            <span>特价</span>
+                            <span>全场包邮</span>
+                        </div>
+                    </li>
+                    <li class="swiper-slide product-list">
+                        <a href="" target="_blank" class="goods-link">
+                            <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                        </a>
+                        <div class="goods-info clearfix">
+                            <div class="product-desc">9999促进宝宝消化排便</div>
+                            <div class="product-title">爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                            <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">AU$</span>177.9</span>
+                                <span class="original-price">
+                                <span class="symbol">AU$</span>277.9</span>
+                            </div>
+                            <a href="" target="_blank" class="product-btn">即将开始</a>
+                        </div>
+                        <div class="discount">75折</div>
+                        <div class="product-badge">
+                            <span>特价</span>
+                            <span>全场包邮</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+
+        <div data-type="6" class="seckill-products-6 seckill-products">
+            <div class="swiper-container">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide product-list">
+                        <a href="" target="_blank" class="goods-link ">
+                            <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                        </a>
+                        <div class="goods-info clearfix">
+                            <div class="product-desc">促进宝宝消化排便</div>
+                            <div class="product-title"> 爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                            <div class="product-badge">
+                                <span>特价</span>
+                                <span>全场包邮</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="present-price">
+                                <span class="symbol">$</span>177.9</span>
+                                <span class="original-price">
+                                <span class="symbol">$</span>277.9</span>
+                            </div>
+                            <a href="" target="_blank" class="product-btn"></a>
+                        </div>
+                        <div class="discount">75折</div>
+                    </li>
+                    <li class="swiper-slide product-list">
+                        <a href="" target="_blank" class="goods-link">
+                            <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                        </a>
+                        <div class="goods-info clearfix">
+                            <div class="product-desc">促进宝宝消化排便</div>
+                            <div class="product-title">爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                            <div class="product-badge">
+                                <span>特价</span>
+                                <span>全场包邮</span>
+                            </div>
+                            <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">$</span>177.9</span>
+                                <span class="original-price">
+                                <span class="symbol">$</span>277.9</span>
+                            </div>
+                            <a href="" target="_blank" class="product-btn"></a>
+                        </div>
+                        <div class="discount">75折</div>
+                    </li>
+                    <li class="swiper-slide product-list">
+                        <a href="" target="_blank" class="goods-link">
+                            <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                        </a>
+                        <div class="goods-info clearfix">
+                            <div class="product-desc">促进宝宝消化排便</div>
+                            <div class="product-title">爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                            <div class="product-badge">
+                                <span>特价</span>
+                                <span>全场包邮</span>
+                            </div>
+                            <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">$</span>177.9</span>
+                                <span class="original-price">
+                                <span class="symbol">$</span>277.9</span>
+                            </div>
+                            <a href="" target="_blank" class="product-btn"></a>
+                        </div>
+                        <div class="discount">75折</div>
+                    </li>
+                    <li class="swiper-slide product-list">
+                        <a href="" target="_blank" class="goods-link">
+                            <img src="http://7xihp5.com1.z0.glb.clouddn.com/media/catalog/product/9/0/901089/bioisland-cod-liver-fish-oil-cap-x-90.jpg" alt="" class="thumb">
+                        </a>
+                        <div class="goods-info clearfix">
+                            <div class="product-desc">促进宝宝消化排便</div>
+                            <div class="product-title">爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装爱他美 配方婴幼儿奶粉1段 1岁以上 800克/罐 3罐装</div>
+                            <div class="product-badge">
+                                <span>特价</span>
+                                <span>全场包邮</span>
+                            </div>
+                            <div class="product-price">
+                            <span class="present-price">
+                                <span class="symbol">$</span>177.9</span>
+                                <span class="original-price">
+                                <span class="symbol">$</span>277.9</span>
+                            </div>
+                            <a href="" target="_blank" class="product-btn"></a>
+                        </div>
+                        <div class="discount">75折</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="js/cms-seckill.js"></script>
+<script>
+    jQuery(function () {
+        var $ = jQuery;
+        new Swiper('.swiper-container',{
+            autoHeight: true,
+            initialSlide :0,
+            slidesPerView: '2.7',
+            observer:true,//修改swiper自己或子元素时，自动初始化swiper
+            observeParents:true//修改swiper的父元素时，自动初始化swiper
+        });
+        seckill($('.seckill-module'));
+    });
+</script>
+</body>
+</html>

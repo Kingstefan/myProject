@@ -1,0 +1,771 @@
+html, body { padding: 0; margin: 0; }
+.seckill-module * { padding: 0; margin: 0; }
+.clearfix:after { content: ""; display: block; clear: both; }
+.clearfix { zoom: 1; }
+ul, li { margin: 0; padding: 0; list-style: none; }
+a {text-decoration: none;-webkit-tap-highlight-color: transparent; outline:none;}
+img {border: none;border: 0;}
+@function pxTorem($px) {
+    @return $px / 100px * 1rem;
+}
+.seckill-module {
+    padding: pxTorem(20px) 0;
+    width: 100%;
+    background: #320779;
+    font-family: "Microsoft Yahei", sans-serif;
+    .img-title {
+        width: 100%;
+        margin: 0 auto;
+        .img {
+            display: block;
+            width: 100%;
+        }
+    }
+    .text-title {
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+        height: pxTorem(80px);
+        background: #f31f47;
+        line-height: pxTorem(80px);
+        font-size: pxTorem(32px);
+        color: #fff;
+        text-align: center;
+    }
+    .seckill-date {
+        width: 100%;
+        margin: pxTorem(20px) auto 1px;
+        height: pxTorem(80px);
+        background: #fff;
+        color: #ea333f;
+        text-align: center;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        font-size: 0;
+        white-space: nowrap;
+        vertical-align: middle;
+        .date-item {
+            display: inline-block;
+            width: pxTorem(170px);
+            height: pxTorem(80px);
+            line-height: pxTorem(80px);
+            font-size: pxTorem(24px);
+            color: #ea333f;
+            text-align: center;
+        }
+        .date-item.current {
+            font-weight: bold;
+        }
+    }
+    .seckill-countdown {
+        display: none;
+        width: 100%;
+        margin: 0 auto;
+        height: pxTorem(90px);
+        background: #fff;
+        color: #ea333f;
+        text-align: center;
+        .countdown-item {
+            float: left;
+            padding-top: pxTorem(15px);
+            width: 33.333%;
+            height: pxTorem(75px);
+            cursor: pointer;
+        }
+        .countdown-item.current {
+            background: #d9d9d9;
+        }
+        .spieltag-text, .countdown {
+            display: block;
+            height: pxTorem(30px);
+            line-height: pxTorem(30px);
+            font-size: pxTorem(22px);
+        }
+        .spieltag-text {
+            font-size: pxTorem(24px);
+        }
+    }
+    .seckill-countdown.current {
+        display: block;
+    }
+    .seckill-products {
+        display: none;
+        padding-top: pxTorem(20px);
+        padding-bottom: pxTorem(10px);
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        .discount {
+            position: absolute;
+            left: pxTorem(15px);
+            top: pxTorem(15px);
+            width: pxTorem(66px);
+            height: pxTorem(66px);
+            border-radius: 50%;
+            background: #eb0933;
+            font-size: pxTorem(24px);
+            line-height: pxTorem(66px);
+            text-align: center;
+            color: #fff;
+        }
+        .product-btn.over {
+            background: #999;
+        }
+        &.current {
+            display: block;
+        }
+    }
+    .seckill-products-6, .seckill-products-5 {
+        padding-bottom: pxTorem(20px);
+    }
+    .seckill-products-1 {
+        .discount {
+            position: absolute;
+            left: pxTorem(30px);
+            top: pxTorem(30px);
+            width: pxTorem(66px);
+            height: pxTorem(66px);
+            border-radius: 50%;
+            background: #eb0933;
+            font-size: pxTorem(24px);
+            line-height: pxTorem(66px);
+            text-align: center;
+            color: #fff;
+        }
+        .product-list {
+            position: relative;
+            margin: 0 auto pxTorem(10px);
+            width: pxTorem(730px);
+            height: pxTorem(340px);
+            background: #fff;
+        }
+        .goods-link {
+            position: relative;
+            display: block;
+            float: left;
+            margin-right: pxTorem(20px);
+            width: pxTorem(340px);
+            height: 100%;
+            overflow: hidden;
+            .thumb {
+                display: block;
+                margin: pxTorem(20px) auto;
+                max-width: pxTorem(300px);
+                max-height: pxTorem(300px);
+                width: auto;
+                height: pxTorem(300px);
+            }
+        }
+        .goods-info {
+            position: relative;
+            float: left;
+            width: pxTorem(350px);
+            height: 100%;
+            overflow: hidden;
+        }
+        .product-desc {
+            position: absolute;
+            left: 0;
+            top: pxTorem(55px);
+            width: 100%;
+            height: pxTorem(40px);
+            line-height: pxTorem(40px);
+            font-size: pxTorem(34px);
+            font-weight: bold;
+            color: #000;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        .product-title {
+            position: absolute;
+            left: 0;
+            top: pxTorem(105px);
+            height: pxTorem(60px);
+            line-height: pxTorem(30px);
+            font-size: pxTorem(24px);
+            color: #666;
+            overflow: hidden;
+        }
+        .product-badge {
+            position: absolute;
+            left: 0;
+            top: pxTorem(192px);
+            overflow: hidden;
+            span {
+                float: left;
+                margin-right: pxTorem(6px);
+                padding: pxTorem(3px) pxTorem(5px);
+                border: 1px dashed #f5262e;
+                font-size: pxTorem(24px);
+                color: #f5262e;
+            }
+        }
+        .product-price {
+            position: absolute;
+            left: 0;
+            top: pxTorem(250px);
+            height: pxTorem(80px);
+        }
+        .present-price {
+            display: block;
+            color: #f5262e;
+            font-size: pxTorem(36px);
+            line-height: pxTorem(40px);
+        }
+        .original-price {
+            display: block;
+            font-size: pxTorem(24px);
+            color: #999;
+            text-decoration: line-through;
+            line-height: pxTorem(34px);
+        }
+        .product-btn {
+            position: absolute;
+            left: pxTorem(270px);
+            top: pxTorem(240px);
+            width: pxTorem(80px);
+            height: pxTorem(80px);
+            background: #589930 url(http://orw3q8coq.bkt.clouddn.com/active/img/20180312/car.png) no-repeat;
+            background-size: 100% 100%;
+            border-radius: pxTorem(16px);
+        }
+    }
+    .seckill-products-2 {
+        .product-badge {
+            position: absolute;
+            left: pxTorem(20px);
+            top: pxTorem(312px);
+            height: pxTorem(36px);
+            overflow: hidden;
+            span {
+                float: left;
+                margin-right: pxTorem(5px);
+                padding: 0 pxTorem(10px);
+                height: pxTorem(36px);
+                background: #ea0c30;
+                border-radius: pxTorem(18px);
+                font-size: pxTorem(24px);
+                color: #fff;
+                line-height: pxTorem(36px);
+            }
+        }
+        .product-list {
+            position: relative;
+            float: left;
+            margin-left: pxTorem(10px);
+            margin-bottom: pxTorem(10px);
+            width: pxTorem(360px);
+            height: pxTorem(635px);
+            background: #fff;
+        }
+        .goods-link {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: pxTorem(360px);
+            overflow: hidden;
+            .thumb {
+                display: block;
+                margin: pxTorem(30px) auto;
+                max-width: pxTorem(300px);
+                max-height: pxTorem(300px);
+                width: auto;
+                height: pxTorem(300px);
+            }
+        }
+        .goods-info {
+            position: relative;
+            width: pxTorem(332px);
+            margin: 0 auto;
+            height: pxTorem(275px);
+            overflow: hidden;
+        }
+        .product-desc {
+            position: absolute;
+            left: 0;
+            top: pxTorem(6px);
+            height: pxTorem(40px);
+            width: 100%;
+            line-height: pxTorem(40px);
+            font-size: pxTorem(34px);
+            font-weight: bold;
+            color: #000;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        .product-title {
+            position: absolute;
+            left: 0;
+            top: pxTorem(56px);
+            height: pxTorem(60px);
+            line-height: pxTorem(30px);
+            font-size: pxTorem(24px);
+            color: #666;
+            overflow: hidden;
+        }
+        .product-price {
+            position: absolute;
+            left: 0;
+            top: pxTorem(123px);
+            height: pxTorem(80px);
+        }
+        .present-price {
+            display: block;
+            color: #f5262e;
+            font-size: pxTorem(36px);
+            line-height: pxTorem(40px);
+        }
+        .original-price {
+            display: block;
+            font-size: pxTorem(24px);
+            color: #999;
+            text-decoration: line-through;
+            line-height: pxTorem(34px);
+        }
+        .product-btn {
+            position: absolute;
+            left: 0;
+            top: pxTorem(203px);
+            width: 100%;
+            height: pxTorem(60px);
+            background: #589930;
+            border-radius: pxTorem(5px);
+            font-size: pxTorem(28px);
+            color: #fff;
+            line-height: pxTorem(60px);
+            text-align: center;
+        }
+    }
+    .seckill-products-3 {
+        .product-badge {
+            position: absolute;
+            left: pxTorem(20px);
+            top: pxTorem(200px);
+            height: pxTorem(30px);
+            overflow: hidden;
+            span {
+                float: left;
+                margin-right: pxTorem(5px);
+                padding: 0 pxTorem(10px);
+                height: pxTorem(30px);
+                background: #ea0c30;
+                border-radius: pxTorem(15px);
+                font-size: pxTorem(20px);
+                color: #fff;
+                line-height: pxTorem(30px);
+            }
+        }
+        .product-list {
+            position: relative;
+            float: left;
+            margin-left: pxTorem(10px);
+            margin-bottom: pxTorem(10px);
+            width: pxTorem(236px);
+            height: pxTorem(480px);
+            background: #fff;
+        }
+        .goods-link {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: pxTorem(236px);
+            overflow: hidden;
+            .thumb {
+                display: block;
+                margin: pxTorem(8px) auto;
+                max-width: pxTorem(220px);
+                max-height: pxTorem(220px);
+                width: auto;
+                height: pxTorem(220px);
+            }
+        }
+        .goods-info {
+            position: relative;
+            width: pxTorem(208px);
+            margin: 0 auto;
+            height: pxTorem(245px);
+            overflow: hidden;
+        }
+        .product-desc {
+            position: absolute;
+            left: 0;
+            top: pxTorem(6px);
+            width: 100%;
+            height: pxTorem(32px);
+            line-height: pxTorem(32px);
+            font-size: pxTorem(28px);
+            font-weight: bold;
+            color: #000;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .product-title {
+            position: absolute;
+            left: 0;
+            top: pxTorem(46px);
+            height: pxTorem(56px);
+            line-height: pxTorem(28px);
+            font-size: pxTorem(22px);
+            color: #666;
+            overflow: hidden;
+        }
+        .product-price {
+            position: absolute;
+            left: 0;
+            top: pxTorem(112px);
+            height: pxTorem(70px);
+            overflow: hidden;
+        }
+        .present-price {
+            display: block;
+            color: #f5262e;
+            font-size: pxTorem(30px);
+            line-height: pxTorem(40px);
+        }
+        .original-price {
+            display: block;
+            font-size: pxTorem(22px);
+            color: #999;
+            text-decoration: line-through;
+            line-height: pxTorem(30px);
+        }
+        .product-btn {
+            position: absolute;
+            left: 0;
+            top: pxTorem(186px);
+            width: 100%;
+            height: pxTorem(46px);
+            background: #589930;
+            border-radius: pxTorem(5px);
+            font-size: pxTorem(22px);
+            color: #fff;
+            line-height: pxTorem(46px);
+            text-align: center;
+        }
+    }
+    .seckill-products-4 {
+        .product-list {
+            position: relative;
+            float: left;
+            margin-left: pxTorem(10px);
+            margin-bottom: pxTorem(10px);
+            width: pxTorem(236px);
+            height: pxTorem(470px);
+            background: #fff;
+        }
+        .goods-link {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: pxTorem(236px);
+            overflow: hidden;
+            .thumb {
+                display: block;
+                margin: pxTorem(8px) auto;
+                max-width: pxTorem(220px);
+                max-height: pxTorem(220px);
+                width: auto;
+                height: pxTorem(220px);
+            }
+        }
+        .goods-info {
+            position: relative;
+            width: pxTorem(208px);
+            margin: 0 auto;
+            height: pxTorem(234px);
+            overflow: hidden;
+        }
+        .product-desc {
+            position: absolute;
+            left: 0;
+            top: pxTorem(6px);
+            height: pxTorem(32px);
+            line-height: pxTorem(32px);
+            font-size: pxTorem(28px);
+            font-weight: bold;
+            color: #000;
+            overflow: hidden;
+        }
+        .product-title {
+            position: absolute;
+            left: 0;
+            top: pxTorem(46px);
+            height: pxTorem(56px);
+            line-height: pxTorem(28px);
+            font-size: pxTorem(22px);
+            color: #666;
+            overflow: hidden;
+        }
+        .product-badge {
+            position: absolute;
+            left: 0;
+            top: pxTorem(110px);
+            overflow: hidden;
+            span {
+                float: left;
+                margin-right: pxTorem(10px);
+                padding: pxTorem(3px) pxTorem(6px);
+                border: 1px dashed #eb0933;
+                font-size: pxTorem(20px);
+                color: #eb0933;
+            }
+        }
+        .product-price {
+            position: absolute;
+            left: 0;
+            top: pxTorem(160px);
+            height: pxTorem(60px);
+            line-height: pxTorem(30px);
+            overflow: hidden;
+        }
+        .present-price {
+            display: block;
+            color: #f5262e;
+            font-size: pxTorem(30px);
+            font-weight: bold;
+            .symbol {
+                font-size: pxTorem(22px);
+                font-weight: normal;
+            }
+        }
+        .original-price {
+            display: block;
+            font-size: pxTorem(22px);
+            color: #999;
+            text-decoration: line-through;
+        }
+        .product-btn {
+            position: absolute;
+            right: 0;
+            top: pxTorem(160px);
+            width: pxTorem(60px);
+            height: pxTorem(60px);
+            background: #589930 url(http://orw3q8coq.bkt.clouddn.com/active/img/20180312/car.png) no-repeat;
+            border-radius: pxTorem(14px);
+            background-size: 100% 100%;
+        }
+    }
+    .seckill-products-5 {
+        .product-badge {
+            position: absolute;
+            left: pxTorem(20px);
+            top: pxTorem(240px);
+            height: pxTorem(30px);
+            overflow: hidden;
+            span {
+                float: left;
+                margin-right: pxTorem(5px);
+                padding: 0 pxTorem(10px);
+                height: pxTorem(30px);
+                background: #ea0c30;
+                border-radius: pxTorem(15px);
+                font-size: pxTorem(20px);
+                color: #fff;
+                line-height: pxTorem(30px);
+            }
+        }
+        .product-list {
+            position: relative;
+            float: left;
+            margin-left: pxTorem(10px);
+            width: pxTorem(280px);
+            height: pxTorem(520px);
+            background: #fff;
+        }
+        .goods-link {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: pxTorem(280px);
+            overflow: hidden;
+            .thumb {
+                display: block;
+                margin: pxTorem(20px) auto;
+                max-width: pxTorem(240px);
+                max-height: pxTorem(240px);
+                width: auto;
+                height: pxTorem(240px);
+            }
+        }
+        .goods-info {
+            position: relative;
+            width: pxTorem(252px);
+            margin: 0 auto;
+            height: pxTorem(240px);
+            overflow: hidden;
+        }
+        .product-desc {
+            position: absolute;
+            left: 0;
+            top: pxTorem(6px);
+            width: 100%;
+            height: pxTorem(32px);
+            line-height: pxTorem(32px);
+            font-size: pxTorem(28px);
+            font-weight: bold;
+            color: #000;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .product-title {
+            position: absolute;
+            left: 0;
+            top: pxTorem(46px);
+            height: pxTorem(56px);
+            line-height: pxTorem(28px);
+            font-size: pxTorem(22px);
+            color: #666;
+            overflow: hidden;
+        }
+        .product-price {
+            position: absolute;
+            left: 0;
+            top: pxTorem(106px);
+            height: pxTorem(70px);
+            overflow: hidden;
+        }
+        .present-price {
+            display: block;
+            color: #f5262e;
+            font-size: pxTorem(30px);
+            line-height: pxTorem(40px);
+        }
+        .original-price {
+            display: block;
+            font-size: pxTorem(22px);
+            color: #999;
+            text-decoration: line-through;
+            line-height: pxTorem(30px);
+        }
+        .product-btn {
+            position: absolute;
+            left: 0;
+            top: pxTorem(182px);
+            width: 100%;
+            height: pxTorem(46px);
+            background: #589930;
+            border-radius: pxTorem(5px);
+            font-size: pxTorem(22px);
+            color: #fff;
+            line-height: pxTorem(46px);
+            text-align: center;
+        }
+    }
+    .seckill-products-6 {
+        .product-list {
+            position: relative;
+            float: left;
+            margin-left: pxTorem(10px);
+            width: pxTorem(280px);
+            height: pxTorem(510px);
+            background: #fff;
+        }
+        .goods-link {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: pxTorem(280px);
+            overflow: hidden;
+            .thumb {
+                display: block;
+                margin: pxTorem(20px) auto;
+                max-width: pxTorem(240px);
+                max-height: pxTorem(240px);
+                width: auto;
+                height: pxTorem(240px);
+            }
+        }
+        .goods-info {
+            position: relative;
+            width: pxTorem(252px);
+            margin: 0 auto;
+            height: pxTorem(230px);
+            overflow: hidden;
+        }
+        .product-desc {
+            position: absolute;
+            left: 0;
+            top: pxTorem(6px);
+            height: pxTorem(32px);
+            line-height: pxTorem(32px);
+            font-size: pxTorem(28px);
+            font-weight: bold;
+            color: #000;
+            overflow: hidden;
+        }
+        .product-title {
+            position: absolute;
+            left: 0;
+            top: pxTorem(46px);
+            height: pxTorem(56px);
+            line-height: pxTorem(28px);
+            font-size: pxTorem(22px);
+            color: #666;
+            overflow: hidden;
+        }
+        .product-badge {
+            position: absolute;
+            left: 0;
+            top: pxTorem(115px);
+            overflow: hidden;
+            span {
+                float: left;
+                margin-right: pxTorem(10px);
+                padding: pxTorem(3px) pxTorem(6px);
+                border: 1px dashed #eb0933;
+                font-size: pxTorem(20px);
+                color: #eb0933;
+            }
+        }
+        .product-price {
+            position: absolute;
+            left: 0;
+            top: pxTorem(160px);
+            height: pxTorem(60px);
+            line-height: pxTorem(30px);
+            overflow: hidden;
+        }
+        .present-price {
+            display: block;
+            color: #f5262e;
+            font-size: pxTorem(30px);
+            font-weight: bold;
+            .symbol {
+                font-size: pxTorem(22px);
+                font-weight: normal;
+            }
+        }
+        .original-price {
+            display: block;
+            font-size: pxTorem(22px);
+            color: #999;
+            text-decoration: line-through;
+        }
+        .product-btn {
+            position: absolute;
+            right: 0;
+            top: pxTorem(160px);
+            width: pxTorem(60px);
+            height: pxTorem(60px);
+            background: #589930 url(http://orw3q8coq.bkt.clouddn.com/active/img/20180312/car.png) no-repeat;
+            border-radius: pxTorem(14px);
+            background-size: 100% 100%;
+        }
+    }
+    .seckill-products-1, .seckill-products-4, .seckill-products-6 {
+        .product-btn.over {
+            font-size: 0!important;
+            background: #999 url(http://orw3q8coq.bkt.clouddn.com/active/img/20180312/car.png) no-repeat;
+            background-size: 100% 100%;
+        }
+    }
+}
+
+
+
+
