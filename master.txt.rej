@@ -1,0 +1,12 @@
+diff a/master.txt b/master.txt	(rejected hunks)
+@@ -2,4 +2,8 @@
+ ����master22222222222
+ ����master33333333333333333
+ ����master444444444
+-����master55555
+\ No newline at end of file
++����master55555
++����master55555
++����master66666
++����master77777
++
